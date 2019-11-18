@@ -64,7 +64,7 @@ file = URI.open('https://images.unsplash.com/photo-1559096996-3b5e8f025ab3?ixlib
  locky = Animal.new({
     name:      'Locky',
     size:      'XS',
-    specie:     'dog',
+    specie:     'Dog',
     location: 'Sydney',
     sexe: 'Male',
     risk_factor:     'XXX',
@@ -78,17 +78,16 @@ file = URI.open('https://images.unsplash.com/photo-1559096996-3b5e8f025ab3?ixlib
  locky.user = nadia
  locky.save
 
-file = URI.open('https://images.unsplash.com/photo-1533069503512-c7d739db4bdf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80')
+file = URI.open('https://images.unsplash.com/photo-1507146426996-ef05306b995a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
 
 
   romeo= Animal.new ({
     name:      'Romeo',
     size:      'XS',
-    specie:     'dog',
+    specie:     'Dog',
     location: 'Paris',
     sexe: 'Male',
     risk_factor:     'X',
-    user_id: 1,
     description: 'this is Leo\'s dog',
     age: 4,
     price: 300
@@ -108,7 +107,6 @@ file = URI.open('https://images.unsplash.com/photo-1552410260-0fd9b577afa6?ixlib
     location: 'Narnia',
     sexe: 'Male',
     risk_factor:     'XX',
-    user_id: 1,
     description: 'The king of Narnia',
     age: 20,
     price: 20
@@ -117,6 +115,41 @@ file = URI.open('https://images.unsplash.com/photo-1552410260-0fd9b577afa6?ixlib
 aslan.photo.attach(io: file, filename: 'aslan.jpg', content_type: 'image/jpg')
 aslan.user = leo
 aslan.save
+
+
+file = URI.open('https://images.unsplash.com/photo-1530824395616-b1ec7fac4aff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
+
+    choupette = Animal.new({
+    name:      'Choupette',
+    size:      'XL',
+    specie:     'Giraffe',
+    location: 'Pigal',
+    sexe: 'Female',
+    risk_factor:     'XX',
+    description: 'The king of Narnia',
+    age: 12,
+    price: 98
+  })
+
+choupette.photo.attach(io: file, filename: 'choupette.jpg', content_type: 'image/jpg')
+choupette.user = leo
+choupette.save
+
+    test = Animal.new({
+    name:      'test_with_no_photo',
+    size:      'XL',
+    specie:     'pff',
+    location: 'oupse',
+    sexe: 'Female',
+    risk_factor:     'XX',
+    description: 'The king of Narnia',
+    age: 12,
+    price: 666
+  })
+
+test.user = leo
+test.save
+
 puts 'Finished!'
 
 puts 'Creating bookings...'
