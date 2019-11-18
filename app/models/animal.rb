@@ -14,4 +14,6 @@ class Animal < ApplicationRecord
   validates :risk_factor, presence: true, inclusion: { in: RISK_FACTOR }
   validates :user, presence: true
   validates :description, presence: true
+  validates :price, presence: true
+  validates :available, presence: true
 end
