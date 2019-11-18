@@ -1,0 +1,19 @@
+show.html.erb
+<h1>Banner</h1>
+<div>
+  <p><%= "#{@animal.name}, #{@animal.specie}" %></p>
+  <p><%= "@animal.photo" %></p>
+</div>
+
+<div>
+  <%= @animal.description %>
+  <div class="form animal show">
+    <%= simple_form_for [@animal, @booking] do |f| %>
+      <%= f.date :starting_date %>
+      <%= f.date :ending_date %>
+      <%= f.submit "Book this pet", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+
+</div>
+
