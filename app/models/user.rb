@@ -7,5 +7,5 @@ class User < ApplicationRecord
   has_many :bookings
   validates :username, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
-  validates :adress, presence: true
+  validates :address, presence: true
 end
