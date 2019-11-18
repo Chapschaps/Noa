@@ -6,15 +6,17 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
-puts "Destroy Users"
-User.destroy_all
+puts "Destroy bookings"
+Booking.destroy_all
 
 puts "Destroy animals"
 Animal.destroy_all
 
-puts "Destroy bookings"
-Booking.destroy_all
+puts "Destroy Users"
+User.destroy_all
+
+
+
 
 
 puts 'Creating user...'
@@ -55,7 +57,8 @@ puts 'Creating animals...'
     sexe: 'Male',
     risk_factor:     'XXX',
     description: 'ugly dog',
-    age: 6
+    age: 0,
+    price: 0
   })
 
  locky.user = nadia
@@ -71,7 +74,8 @@ puts 'Creating animals...'
     risk_factor:     'X',
     user_id: 1,
     description: 'this is Leo\'s dog',
-    age: 4
+    age: 4,
+    price: 300
   })
 
   romeo.user = leo
@@ -86,7 +90,8 @@ puts 'Creating animals...'
     risk_factor:     'XX',
     user_id: 1,
     description: 'The king of Narnia',
-    age: 20
+    age: 20,
+    price: 20
   })
 
 aslan.user = leo
