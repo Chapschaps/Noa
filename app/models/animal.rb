@@ -8,7 +8,7 @@ class Animal < ApplicationRecord
   validates :name, presence: true
   validates :age, presence: true
   validates :size, presence: true, inclusion: { in: SIZE }
-  validated :specie, presence: true
+  validates :specie, presence: true
   validates :location, presence: true
   validates :sexe, presence: true, inclusion: { in: SEXE }
   validates :risk_factor, presence: true, inclusion: { in: RISK_FACTOR }
