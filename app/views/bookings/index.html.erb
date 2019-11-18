@@ -1,1 +1,11 @@
-index.html.erb
+<h1>Your Bookings</h1>
+<ul>
+  <% @bookings.each do |booking| %>
+    <% i = 0 %>
+    <li><% link_to Booking number : <%= i %> with <%= Animal.find(booking.animal).name %>
+      Starting date : <%= @booking.starting_date %>
+      Ending date : <%= @booking.ending_date %>
+      Total Price : <%= @booking.total_price %></li>, user_bookings_path %>
+    <% i += 1 %>
+  <% end %>
+</ul>
