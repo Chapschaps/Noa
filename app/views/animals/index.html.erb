@@ -1,1 +1,8 @@
-index.html.erb
+<h1>Découvrez votre nouveau compagnon !</h1>
+<br>
+<% @animals.each do |animal| %>
+  <%= "animal.photo" %>
+  <%= animal.name %>
+  <%= animal.specie %>
+  <%= animal.location %>
+<% end %>

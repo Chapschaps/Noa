@@ -7,14 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "Destroy bookings"
 Booking.destroy_all
-
 puts "Destroy animals"
 Animal.destroy_all
 
 puts "Destroy Users"
 User.destroy_all
-
-
 
 
 
@@ -59,7 +56,8 @@ file = URI.open('https://images.unsplash.com/photo-1559096996-3b5e8f025ab3?ixlib
     sexe: 'Male',
     risk_factor:     'XXX',
     description: 'ugly dog',
-    age: 6
+    age: 0,
+    price: 0
   })
 
  locky.photo.attach(io: file, filename: 'locky.jpg', content_type: 'image/jpg')
@@ -79,7 +77,8 @@ file = URI.open('https://images.unsplash.com/photo-1533069503512-c7d739db4bdf?ix
     risk_factor:     'X',
     user_id: 1,
     description: 'this is Leo\'s dog',
-    age: 4
+    age: 4,
+    price: 300
   })
 
  romeo.photo.attach(io: file, filename: 'romeo.jpg', content_type: 'image/jpg')
@@ -98,7 +97,8 @@ file = URI.open('https://images.unsplash.com/photo-1552410260-0fd9b577afa6?ixlib
     risk_factor:     'XX',
     user_id: 1,
     description: 'The king of Narnia',
-    age: 20
+    age: 20,
+    price: 20
   })
 
 aslan.photo.attach(io: file, filename: 'aslan.jpg', content_type: 'image/jpg')
