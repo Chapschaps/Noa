@@ -5,16 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-
-puts "Destroy Users"
-User.destroy_all
+puts "Destroy bookings"
+Booking.destroy_all
 
 puts "Destroy animals"
 Animal.destroy_all
 
-puts "Destroy bookings"
-Booking.destroy_all
+puts "Destroy Users"
+User.destroy_all
+
+
+
+
 
 
 puts 'Creating user...'
@@ -47,6 +49,8 @@ puts 'Finished!'
 
 puts 'Creating animals...'
 
+file = URI.open('https://images.unsplash.com/photo-1559096996-3b5e8f025ab3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
+
  locky = Animal.new({
     name:      'Locky',
     size:      'XS',
@@ -58,13 +62,17 @@ puts 'Creating animals...'
     age: 6
   })
 
+ locky.photo.attach(io: file, filename: 'locky.jpg', content_type: 'image/jpg')
+
  locky.user = nadia
  locky.save
+
+file = URI.open('https://images.unsplash.com/photo-1533069503512-c7d739db4bdf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80')
 
 
   romeo= Animal.new ({
     name:      'Romeo',
-    size:      'S',
+    size:      'XS',
     specie:     'dog',
     location: 'Paris',
     sexe: 'Male',
@@ -74,8 +82,12 @@ puts 'Creating animals...'
     age: 4
   })
 
+ romeo.photo.attach(io: file, filename: 'romeo.jpg', content_type: 'image/jpg')
+
   romeo.user = leo
   romeo.save
+
+file = URI.open('https://images.unsplash.com/photo-1552410260-0fd9b577afa6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
 
     aslan = Animal.new({
     name:      'Aslan',
@@ -89,6 +101,7 @@ puts 'Creating animals...'
     age: 20
   })
 
+aslan.photo.attach(io: file, filename: 'aslan.jpg', content_type: 'image/jpg')
 aslan.user = leo
 aslan.save
 puts 'Finished!'
