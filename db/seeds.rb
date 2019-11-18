@@ -18,6 +18,10 @@ User.destroy_all
 
 puts 'Creating user...'
 
+
+file = URI.open('https://avatars0.githubusercontent.com/u/53259210?v=4')
+
+
  leo = User.new( {
     username:      'chapschaps',
     address:      'Paris',
@@ -27,6 +31,12 @@ puts 'Creating user...'
     email: 'leo@gmail.com',
     password: '123456'
   })
+
+  leo.photo.attach(io: file, filename: 'leo.jpg', content_type: 'image/jpg')
+
+
+file = URI.open('https://avatars1.githubusercontent.com/u/54894352?v=4')
+
 
   nadia = User.new ({
     username:      'nadiachou',
@@ -38,6 +48,9 @@ puts 'Creating user...'
     password: '123456'
 
   })
+
+nadia.photo.attach(io: file, filename: 'nadia.jpg', content_type: 'image/jpg')
+
 
  leo.save
  nadia.save

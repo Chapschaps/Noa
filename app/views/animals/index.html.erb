@@ -1,8 +1,9 @@
 <h1>Trouvez votre nouveau compagnon !</h1>
 <br>
 <% @animals.each do |animal| %>
-  <%= link_to animal.name, animal_path(animal) %>
+   <%= animal.name %>
   <%= animal.specie %>
   <%= animal.location %>
-  <%= cl_image_tag animal.photo.key, height: 300, width: 300, crop: :fill %>
+    <%= cl_image_tag animal.photo.key, height: 300, width: 300, crop: :fill %>
+
 <% end %>
