@@ -18,7 +18,7 @@
           <p>    <%= animal.specie %> <%= animal.location %></p>
         </div>
         <h2 class="card-animal-pricing"> <%= "#{animal.price}$/per day" %></h2>
-        <%= cl_image_tag animal.user.photo.key, height: 40, width: 40, crop: :fill, class: "card-animal-user avatar-bordered"  %>
+        <%= cl_image_tag animal.user.photo.key, height: 20, width: 20, crop: :fill, class: "card-animal-user avatar-bordered"  %>
        </div>
     </div>
   <% end %>
