@@ -17,6 +17,26 @@
   font-weight: bold;
 }
 
+.search-form-home {
+  display: flex;
+  padding: 32px;
+  margin: 32px;
+  background-color: white;
+  width: 500px;
+  // height: 500px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 16px 40px;
+  // justify-content: flex-start;
+  // align-items: center;
+}
+
+.search-form-home h1 {
+  font-size: 24px;
+  color: #364f6b;;
+  font-weight: bold;
+}
+
+
 .dates-inputs {
   display: flex;
   justify-content: space-between;
@@ -38,3 +58,7 @@
   border: 1px solid #ced4da;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   }
+
+.form-date {
+  width: 45%;
+}

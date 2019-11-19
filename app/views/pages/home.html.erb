@@ -2,7 +2,7 @@
   <%= render 'shared/navbar' %>
   <%= render 'shared/flashes' %>
 
-  <div class="search-form">
+  <div class="search-form-home">
     <form>
       <h1>Rent amazing animals and change your life</h1>
       <div class="form-group">
@@ -14,16 +14,18 @@
         <input type="text" class="form-control" id="Where" aria-describedby="Location" placeholder="Anywhere">
       </div>
       <div class="dates-inputs">
-        <div class="form-group">
+        <div class="form-group form-date">
           <label for="check-in">Check-in</label>
           <input type="date" class="form-control" id="check-in" placeholder="dd-mm-yyyy">
         </div>
-        <div class="form-group">
+        <div class="form-group form-date">
           <label for="check-out">Check-out</label>
           <input type="date" class="form-control" id="check-out" placeholder="dd-mm-yyyy">
         </div>
       </div>
+      <div class="button">
       <button type="submit" class="btn btn-primary">Search</button>
+      </div>
     </form>
   </div>
 </div>
@@ -53,6 +55,7 @@
   </div>
 </div>
 
+<!--  -->
 
 
 
