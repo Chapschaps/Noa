@@ -9,43 +9,46 @@
 
   <div class="card-show">
     <div class="row">
-      <div class="col-sm-12 col-md-6 col-lg-8">
+      <div class="col-8">
         <div class="card-description-show">
-          <strong><%= @animal.description %></strong>
-          <h3>Location</h3>
-          <p><%= @animal.location %></p>
-          <h3>Sexe</h3>
-          <p><%= @animal.sexe %></p>
-          <h3>Size</h3>
-          <p><%= @animal.size %></p>
-          <h3>Age</h3>
-          <p><%= @animal.age %></p>
-          <h3>Risk factor</h3>
-          <% if @animal.risk_factor == "XXX" %>
-            <p style="color:red;"><strong>High</strong></p>
-          <% elsif @animal.risk_factor =="XX" %>
-            <p>Normal</p>
-          <% elsif @animal.risk_factor =="X" %>
-            <p style="color:green;"><strong>Low</strong></p>
-          <% end %>
+          <p id="animal-description"><%= @animal.description %></p>
+          <br />
+
+          <h3> - Location : <%= @animal.location %> </h3>
+<!--           <p><%= @animal.location %></p>
+-->       <h3> - Sexe : <%= @animal.sexe %> </h3>
+<!--           <p><%= @animal.sexe %></p>
+-->       <h3> - Size : <%= @animal.size %> </h3>
+<!--           <p><%= @animal.size %></p>
+-->       <h3> - Age : <%= @animal.age %> </h3>
+<!--           <p><%= @animal.age %></p>
+-->       <h3> - Risk factor :
+            <% if @animal.risk_factor == "XXX" %>
+              <p style="color:red;"><strong>High</strong></p>
+            <% elsif @animal.risk_factor =="XX" %>
+              <p>Normal</p>
+            <% elsif @animal.risk_factor =="X" %>
+              <p style="color:green;"><strong>Low</strong></p>
+            <% end %>
+          </h3>
         </div>
       </div>
 
-      <div class="col-sm-12 col-md-6 col-lg-4">
-        <div class="search-form" id="show-search-from">
-          <h4>Add dates for prices</h4>
+      <div class="col-4">
+<!--         <div class="search-form" id="show-search-form">
+ -->          <h2>Add dates</h2>
           <br>
           <%= form_tag animal_confirmation_path(@animal), method: :get do %>
             <%= date_field_tag :starting_date %>
-            <br style="padding:200px;">
-            <%= date_field_tag :ending_date %>
+<!--             <br style="padding:200px;">
+ -->            <%= date_field_tag :ending_date %>
             <br>
-            <%= submit_tag "Reservez" %>
+            <%= submit_tag "Book" %>
             <% end %>
-        </div>
+<!--         </div>
+ -->      </div>
       </div>
-      </div>
-      </div>
+    </div>
 <!--       <%#= simple_form_for [@animal, @booking] do |f| %>
         <%#= f.input :starting_date, as: :date, html5: true %>
         <%#= f.input :ending_date, as: :date, html5: true %>
