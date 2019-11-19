@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
 
+
   def show
     @booking.total_price = total_price
   end
@@ -10,13 +11,17 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @animal = Animal.find(params[:animal_id])
     @booking = Booking.new(booking_params)
-    @booking.user = @user
+
+    @booking.user = current_user
+    @booking.animal = @animal
     @booking.total_price = total_price
+
     if @booking.save
-      redirect_to user_path(@user)
+      redirect_to dashboard_path
     else
-      render :new
+      redirect_to root_path
     end
   end
 

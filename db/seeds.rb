@@ -70,7 +70,10 @@ file = URI.open('https://images.unsplash.com/photo-1559096996-3b5e8f025ab3?ixlib
     location: 'Sydney',
     sexe: 'Male',
     risk_factor:     'XXX',
+
+
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
+
     age: 0,
     price: 0
   })
@@ -110,7 +113,7 @@ file = URI.open('https://images.unsplash.com/photo-1507146426996-ef05306b995a?ix
     location: 'Marseille',
     sexe: 'Male',
     risk_factor:     'XXX',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligend',
     age: 4,
     price: 200
   })
@@ -129,7 +132,7 @@ file = URI.open('https://images.unsplash.com/photo-1552410260-0fd9b577afa6?ixlib
     location: 'Narnia',
     sexe: 'Male',
     risk_factor:     'XX',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantis',
     age: 20,
     price: 20
   })
@@ -148,7 +151,8 @@ file = URI.open('https://images.unsplash.com/photo-1530824395616-b1ec7fac4aff?ix
     location: 'Pigal',
     sexe: 'Female',
     risk_factor:     'XX',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!
+Nisi aliquid repellat, cumque sequi, fugiat quaerat impedit necessitatibus d',
     age: 12,
     price: 98
   })
