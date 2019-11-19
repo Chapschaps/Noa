@@ -9,6 +9,10 @@ $headings-font-family:    $headers-font;
 $body-bg:                 $light-gray;
 $font-size-base: 1rem;
 
+h1{
+  color: $blue-dark;
+}
+
 // Colors
 $body-color: $gray;
 $primary:    $blue;

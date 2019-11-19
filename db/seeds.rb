@@ -173,7 +173,7 @@ Nulla libero, accusantium adipisci ut nisi minus eum quia, pariatur unde praesen
   })
 
 aslan.photo.attach(io: file, filename: 'aslan.jpg', content_type: 'image/jpg')
-aslan.user = leo
+aslan.user = nadia
 aslan.save
 
 
@@ -234,6 +234,17 @@ puts 'Creating bookings...'
  vacances.animal = locky
 
  vacances.save
+
+  booking2 = Booking.new({
+    status:      'requested',
+    starting_date:    Date.today + 28,
+    ending_date:    Date.today + 34
+  })
+
+ booking2.user = leo
+ booking2.animal = aslan
+
+ booking2.save
 
 puts 'Finished!'
 
