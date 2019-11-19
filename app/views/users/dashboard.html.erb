@@ -4,7 +4,7 @@
 <ul class="container mt-3">
   <h2>Your Bookings:</h2>
   <% @user.bookings.each do |booking| %>
-    <div class="card-booking m-3">
+    <div class="card-booking m-3 ">
       <% if booking.animal.photo.attached? %>
         <%= cl_image_tag booking.animal.photo.key, height: 400, width: 400, crop: :fill, class: "animal-img" %>
       <% else %>
@@ -34,6 +34,7 @@
               <% end %>
           </div>
       </div>
+      <%= link_to "", booking_path(booking), class: "card-link" %>
     </div>
   <% end %>
 </ul>
