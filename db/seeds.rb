@@ -35,6 +35,7 @@ file = URI.open('https://avatars0.githubusercontent.com/u/53259210?v=4')
   })
 
   leo.photo.attach(io: file, filename: 'leo.jpg', content_type: 'image/jpg')
+ leo.save
 
 
 file = URI.open('https://avatars1.githubusercontent.com/u/54894352?v=4')
@@ -54,8 +55,80 @@ file = URI.open('https://avatars1.githubusercontent.com/u/54894352?v=4')
 nadia.photo.attach(io: file, filename: 'nadia.jpg', content_type: 'image/jpg')
 
 
- leo.save
  nadia.save
+
+ file = URI.open('https://ca.slack-edge.com/T02NE0241-U02NE1NL9-40998e0a5c92-512')
+
+
+   boris = User.new ({
+    username:      'boris',
+    address:      'Londre',
+    first_name:     'Boris',
+    last_name: 'Papillard',
+    contact: '069999999',
+    email: 'boris@gmail.com',
+    password: '123456'
+
+  })
+
+boris.photo.attach(io: file, filename: 'boris.jpg', content_type: 'image/jpg')
+boris.save
+
+
+ file = URI.open('https://i.pinimg.com/originals/24/c6/50/24c65066e5a0df1548b96f52f88fec74.jpg')
+
+
+
+   donald = User.new ({
+    username:      'TheDonald',
+    address:      'Florida',
+    first_name:     'Donald',
+    last_name: 'Trump',
+    contact: '069999999',
+    email: 'donald@gmail.com',
+    password: '123456'
+
+  })
+
+donald.photo.attach(io: file, filename: 'donald.jpg', content_type: 'image/jpg')
+donald.save
+
+ file = URI.open('https://upload.wikimedia.org/wikipedia/en/a/a3/Lordvoldemort.jpg')
+
+
+
+   tom = User.new ({
+    username:      'Voldemort',
+    address:      'Lille',
+    first_name:     'Tom',
+    last_name: 'Riddle',
+    contact: '069999999',
+    email: 'tom@gmail.com',
+    password: '123456'
+
+  })
+
+tom.photo.attach(io: file, filename: 'tom.jpg', content_type: 'image/jpg')
+tom.save
+
+ file = URI.open('https://www.essence.com/wp-content/uploads/2018/06/image/2017/11/main/beyonce-tout_0-1472x1472.jpg')
+
+
+
+   beyonce = User.new ({
+    username:      'Queen-B',
+    address:      'LA',
+    first_name:     'Beyonce',
+    last_name: 'Knowls',
+    contact: '069999999',
+    email: 'beyonce@gmail.com',
+    password: '123456'
+
+  })
+
+beyonce.photo.attach(io: file, filename: 'beyonce.jpg', content_type: 'image/jpg')
+beyonce.save
+
 puts 'Finished!'
 
 
@@ -120,7 +193,202 @@ file = URI.open('https://images.unsplash.com/photo-1507146426996-ef05306b995a?ix
 
  draco.photo.attach(io: file, filename: 'draco.jpg', content_type: 'image/jpg')
 
-  draco.user = nadia
+  draco.user = tom
+  draco.save
+
+file = URI.open('https://images.unsplash.com/photo-1552410260-0fd9b577afa6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
+
+    aslan = Animal.new({
+    name:      'Aslan',
+    size:      'L',
+    specie:     'Lion',
+    location: 'Narnia',
+    sexe: 'Male',
+    risk_factor:     'XX',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
+    age: 20,
+    price: 20
+  })
+
+aslan.photo.attach(io: file, filename: 'aslan.jpg', content_type: 'image/jpg')
+aslan.user = nadia
+aslan.save
+
+
+file = URI.open('https://images.unsplash.com/photo-1530824395616-b1ec7fac4aff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
+
+    choupette = Animal.new({
+    name:      'Choupette',
+    size:      'XL',
+    specie:     'Giraffe',
+    location: 'Pigal',
+    sexe: 'Female',
+    risk_factor:     'XX',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
+    age: 12,
+    price: 98
+  })
+
+choupette.photo.attach(io: file, filename: 'choupette.jpg', content_type: 'image/jpg')
+choupette.user = nadia
+choupette.save
+
+file = URI.open('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=727&q=80')
+
+ cupcake = Animal.new({
+    name:      'Cupcake',
+    size:      'XS',
+    specie:     'Cat',
+    location: 'London',
+    sexe: 'Male',
+    risk_factor:     'X',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
+    age: 3,
+    price: 21
+  })
+
+ cupcake.photo.attach(io: file, filename: 'cupcake.jpg', content_type: 'image/jpg')
+
+ cupcake.user = boris
+ cupcake.save
+
+ file = URI.open('https://images.unsplash.com/photo-1548247416-ec66f4900b2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=363&q=80')
+
+ cookie = Animal.new({
+    name:      'Cookie',
+    size:      'S',
+    specie:     'Cat',
+    location: 'London',
+    sexe: 'Male',
+    risk_factor:     'X',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
+    age: 8,
+    price: 10
+  })
+
+ cookie.photo.attach(io: file, filename: 'cookie.jpg', content_type: 'image/jpg')
+
+ cookie.user = boris
+ cookie.save
+
+file = URI.open('https://images.unsplash.com/photo-1567201080580-bfcc97dae346?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+
+ martin = Animal.new({
+    name:      'Martin',
+    size:      'S',
+    specie:     'Pig',
+    location: 'Washington',
+    sexe: 'Male',
+    risk_factor:     'X',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
+    age: 8,
+    price: 150
+  })
+
+ martin.photo.attach(io: file, filename: 'martin.jpg', content_type: 'image/jpg')
+
+ martin.user = donald
+ martin.save
+
+
+ file = URI.open('https://images.unsplash.com/photo-1477764250597-dffe9f601ae8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
+
+
+ jayz = Animal.new({
+    name:      'Jay-Z',
+    size:      'L',
+    specie:     'Tiger',
+    location: 'LA',
+    sexe: 'Male',
+    risk_factor:     'XXX',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
+    age: 8,
+    price: 150
+  })
+
+ jayz.photo.attach(io: file, filename: 'jayz.jpg', content_type: 'image/jpg')
+
+ jayz.user = donald
+ jayz.save
+
+file = URI.open('https://images.unsplash.com/photo-1537318574534-7bfff307c4f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=731&q=80')
+
+
+  nagini = Animal.new({
+    name:      'Nagini',
+    size:      'L',
+    specie:     'Snake',
+    location: 'LA',
+    sexe: 'Male',
+    risk_factor:     'XXXXX',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
+    age: 8,
+    price: 450
+  })
+
+ nagini.photo.attach(io: file, filename: 'nagini.jpg', content_type: 'image/jpg')
+
+ nagini.user = tom
+ nagini.save
+
+ file = URI.open('https://images.unsplash.com/photo-1559096996-3b5e8f025ab3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
+
+
+ locky = Animal.new({
+    name:      'Locky',
+    size:      'XS',
+    specie:     'Dog',
+    location: 'Sydney',
+    sexe: 'Male',
+    risk_factor:     'XXX',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
+    age: 0,
+    price: 0
+  })
+
+ locky.photo.attach(io: file, filename: 'locky.jpg', content_type: 'image/jpg')
+
+ locky.user = nadia
+ locky.save
+
+file = URI.open('https://images.unsplash.com/photo-1507146426996-ef05306b995a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
+
+
+  romeo= Animal.new ({
+    name:      'Romeo',
+    size:      'XS',
+    specie:     'Dog',
+    location: 'Paris',
+    sexe: 'Male',
+    risk_factor:     'X',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
+    age: 4,
+    price: 300
+  })
+
+ romeo.photo.attach(io: file, filename: 'romeo.jpg', content_type: 'image/jpg')
+
+  romeo.user = leo
+  romeo.save
+
+  file = URI.open('https://images.unsplash.com/photo-1525682691400-309fa6755eb5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80')
+
+
+  draco= Animal.new ({
+    name:      'Draco',
+    size:      'L',
+    specie:     'Snake',
+    location: 'Marseille',
+    sexe: 'Male',
+    risk_factor:     'XXX',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
+    age: 4,
+    price: 200
+  })
+
+ draco.photo.attach(io: file, filename: 'draco.jpg', content_type: 'image/jpg')
+
+  draco.user = tom
   draco.save
 
 file = URI.open('https://images.unsplash.com/photo-1552410260-0fd9b577afa6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
@@ -160,6 +428,106 @@ Nisi aliquid repellat, cumque sequi, fugiat quaerat impedit necessitatibus d',
 choupette.photo.attach(io: file, filename: 'choupette.jpg', content_type: 'image/jpg')
 choupette.user = nadia
 choupette.save
+
+file = URI.open('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=727&q=80')
+
+ cupcake = Animal.new({
+    name:      'Cupcake',
+    size:      'XS',
+    specie:     'Cat',
+    location: 'London',
+    sexe: 'Male',
+    risk_factor:     'X',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
+    age: 3,
+    price: 21
+  })
+
+ cupcake.photo.attach(io: file, filename: 'cupcake.jpg', content_type: 'image/jpg')
+
+ cupcake.user = boris
+ cupcake.save
+
+ file = URI.open('https://images.unsplash.com/photo-1548247416-ec66f4900b2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=363&q=80')
+
+ cookie = Animal.new({
+    name:      'Cookie',
+    size:      'S',
+    specie:     'Cat',
+    location: 'London',
+    sexe: 'Male',
+    risk_factor:     'X',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
+    age: 8,
+    price: 10
+  })
+
+ cookie.photo.attach(io: file, filename: 'cookie.jpg', content_type: 'image/jpg')
+
+ cookie.user = boris
+ cookie.save
+
+file = URI.open('https://images.unsplash.com/photo-1567201080580-bfcc97dae346?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+
+ martin = Animal.new({
+    name:      'Martin',
+    size:      'S',
+    specie:     'Pig',
+    location: 'Washington',
+    sexe: 'Male',
+    risk_factor:     'X',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
+    age: 8,
+    price: 150
+  })
+
+ martin.photo.attach(io: file, filename: 'martin.jpg', content_type: 'image/jpg')
+
+ martin.user = donald
+ martin.save
+
+
+ file = URI.open('https://images.unsplash.com/photo-1477764250597-dffe9f601ae8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
+
+
+ jayz = Animal.new({
+    name:      'Jay-Z',
+    size:      'L',
+    specie:     'Tiger',
+    location: 'LA',
+    sexe: 'Male',
+    risk_factor:     'XXX',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
+    age: 8,
+    price: 150
+  })
+
+ jayz.photo.attach(io: file, filename: 'jayz.jpg', content_type: 'image/jpg')
+
+ jayz.user = donald
+ jayz.save
+
+file = URI.open('https://images.unsplash.com/photo-1537318574534-7bfff307c4f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=731&q=80')
+
+
+  nagini = Animal.new({
+    name:      'Nagini',
+    size:      'L',
+    specie:     'Snake',
+    location: 'LA',
+    sexe: 'Male',
+    risk_factor:     'XXXXX',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
+    age: 8,
+    price: 450
+  })
+
+ nagini.photo.attach(io: file, filename: 'nagini.jpg', content_type: 'image/jpg')
+
+ nagini.user = tom
+ nagini.save
+
+
 
     test = Animal.new({
     name:      'test_with_no_photo',
@@ -236,6 +604,50 @@ puts 'Creating bookings...'
 
  vacances.save
 
+ vacances = Booking.new({
+    status:      'requested',
+    starting_date:    Date.today + 14,
+    ending_date:    Date.today + 23
+  })
+ vacances.user = donald
+ vacances.animal = cupcake
+ vacances.total_price = total_price(vacances)
+
+ vacances.save
+
+  vacances = Booking.new({
+    status:      'accepted',
+    starting_date:    Date.today + 4,
+    ending_date:    Date.today + 15
+  })
+ vacances.user = tom
+ vacances.animal = cupcake
+ vacances.total_price = total_price(vacances)
+
+ vacances.save
+
+
+  vacances = Booking.new({
+    status:      'accepted',
+    starting_date:    Date.today + 3,
+    ending_date:    Date.today + 12
+  })
+ vacances.user = nadia
+ vacances.animal = martin
+ vacances.total_price = total_price(vacances)
+
+ vacances.save
+
+  vacances = Booking.new({
+    status:      'accepted',
+    starting_date:    Date.today + 4,
+    ending_date:    Date.today + 15
+  })
+ vacances.user = boris
+ vacances.animal = nagini
+ vacances.total_price = total_price(vacances)
+
+ vacances.save
 
 puts 'Finished!'
 
