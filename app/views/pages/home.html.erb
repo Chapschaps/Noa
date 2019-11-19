@@ -7,7 +7,7 @@
       <h1>Rent amazing animals and change your life</h1>
       <div class="form-group">
         <label for="Animal">Specie</label>
-        <input type="select" class="form-control" id="Animal" aria-describedby="Specie" placeholder="Dog">
+        <input type="text" class="form-control" id="Animal" aria-describedby="Specie" placeholder="Dog">
       </div>
       <div class="form-group">
         <label for="Where">Location</label>
@@ -30,5 +30,28 @@
 
 <div class="animal_suggestions">
   <h1>Our best puppies</h1>
+  <div class="cards container">
+  <% @best_animals.each do |animal| %>
+    <div class="card-animal card-home">
+      <%= link_to animal_path(animal) do %>
+        <% if animal.photo.attached? %>
+          <%= cl_image_tag animal.photo.key, height: 200, width: 400, crop: :fill %>
+        <% else %>
+          <%= cl_image_tag "sample.jpg", height: 200, width: 400, crop: :fill %>
+        <% end %>
+      <% end %>
+      <div class="card-animal-infos">
+        <div>
+          <h2><%= link_to animal.name, animal_path(animal) %></h2>
+          <p>    <%= animal.specie %> <%= animal.location %></p>
+        </div>
+        <h2 class="card-animal-pricing"> <%= "#{animal.price}$/per day" %></h2>
+        <%= cl_image_tag animal.user.photo.key, height: 40, width: 40, crop: :fill, class: "card-animal-user avatar-bordered"  %>
+       </div>
+    </div>
+  <% end %>
+</div>
+
+
 </div>
 

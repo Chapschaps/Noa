@@ -18,12 +18,10 @@
 }
 
 .dates-inputs {
-
+  display: flex;
+  justify-content: space-between;
 }
-// .form-group {
-//   height: 20px;
-//   width: 100px;
-// }
+
 
 .form-group label {
   font-size: 14px;
