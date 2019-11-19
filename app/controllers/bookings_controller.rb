@@ -3,10 +3,12 @@ class BookingsController < ApplicationController
   before_action :set_user, only: [:index, :create]
 
   def index
-    @bookings = @user.bookings
+    @bookings = current_user.bookings
+    raise
   end
 
   def show
+    @booking.total_price = total_price
   end
 
   def new
@@ -46,5 +48,10 @@ class BookingsController < ApplicationController
 
   def booking_params
     params.require(:booking).permit(:animal, :user, :status, :starting_date, :ending_date)
+  end
+
+  def total_price
+    nb_days = (@booking.ending_date - @booking.starting_date).to_i
+    nb_days * @booking.animal.price
   end
 end
