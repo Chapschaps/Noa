@@ -17,10 +17,11 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.animal = @animal
     @booking.total_price = total_price
-
+    @booking.status = "requested"
     if @booking.save
       redirect_to dashboard_path
     else
+      raise
       redirect_to root_path
     end
   end
