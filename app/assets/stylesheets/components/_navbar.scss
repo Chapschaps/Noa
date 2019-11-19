@@ -1,13 +1,14 @@
-.navbar-lewagon {
+.navbar-noa {
   justify-content: space-between;
-  background: transparent;
+  background: white;
 }
-
-.navbar-lewagon .navbar-collapse {
+.navbar-home {
+   background: transparent;
+.navbar-noa .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-noa .navbar-brand img {
   width: 40px;
 }
 
