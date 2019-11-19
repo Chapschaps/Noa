@@ -40,7 +40,6 @@ class AnimalsController < ApplicationController
   def booking_confirmation
     @animal = Animal.find(params[:animal_id])
     @booking = Booking.new
-
   end
 
   private
