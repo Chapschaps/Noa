@@ -1,22 +1,44 @@
-<%= render 'shared/navbar_home' %>
-<%= render 'shared/flashes' %>
-<br>
-<div class="banner-animal-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/2194261/pexels-photo-2194261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);"></div>
+<div class="body-show-animal">
 
-<div>
-  <h1><%= "#{@animal.name}, #{@animal.specie}" %></h1>
-</div>
+  <%= render 'shared/navbar_home' %>
+  <%= render 'shared/flashes' %>
+  <br>
+  <div class="banner-animal-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/2194261/pexels-photo-2194261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);"></div>
 
-<div class="card-show">
-  <div class="card-description-show">
-    <%= @animal.description %>
-  </div>
-  <div class="search-form">
-    <%= simple_form_for [@animal, @booking] do |f| %>
-      <%= f.input :starting_date, as: :date, html5: true %>
-      <%= f.input :ending_date, as: :date, html5: true %>
-      <%= f.submit :submit, class: "btn btn-primary" %>
-    <% end %>
+  <div class="title-show-animal">
+    <h1><%= "#{@animal.name}, #{@animal.specie}" %></h1>
   </div>
 
+  <div class="card-show">
+    <div class="card-description-show">
+      <strong><%= @animal.description %></strong>
+      <h3>Location</h3>
+      <p><%= @animal.location %></p>
+      <h3>Sexe</h3>
+      <p><%= @animal.sexe %></p>
+      <h3>Size</h3>
+      <p><%= @animal.size %></p>
+      <h3>Age</h3>
+      <p><%= @animal.age %></p>
+      <h3>Risk factor</h3>
+      <% if @animal.risk_factor == "XXX" %>
+        <p style="color:red;"><strong>High</strong></p>
+      <% elsif @animal.risk_factor =="XX" %>
+        <p>Normal</p>
+      <% elsif @animal.risk_factor =="X" %>
+        <p style="color:green;"><strong>Low</strong></p>
+      <% end %>
+    </div>
+
+    <div class="search-form" id="show-search-from">
+      <h4>Add dates for prices</h4>
+      <%= simple_form_for [@animal, @booking] do |f| %>
+        <%= f.input :starting_date, as: :date, html5: true %>
+        <%= f.input :ending_date, as: :date, html5: true %>
+        <%= f.submit :submit, class: "btn btn-primary" %>
+      <% end %>
+    </div>
+
+  </div>
 </div>
+
