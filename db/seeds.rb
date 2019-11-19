@@ -16,6 +16,8 @@ User.destroy_all
 
 
 
+
+
 puts 'Creating user...'
 
 
@@ -69,7 +71,7 @@ file = URI.open('https://images.unsplash.com/photo-1559096996-3b5e8f025ab3?ixlib
     sexe: 'Male',
     risk_factor:     'XXX',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
-     age: 0,
+    age: 0,
     price: 0
   })
 
@@ -174,6 +176,11 @@ puts 'Finished!'
 
 puts 'Creating bookings...'
 
+ def total_price(booking)
+    nb_days = (booking.ending_date - booking.starting_date).to_i
+    nb_days * booking.animal.price
+  end
+
  vacances = Booking.new({
     status:      'requested',
     starting_date:    Date.today + 4,
@@ -182,6 +189,7 @@ puts 'Creating bookings...'
 
  vacances.user = leo
  vacances.animal = aslan
+ vacances.total_price = total_price(vacances)
 
  vacances.save
 
@@ -194,6 +202,7 @@ puts 'Creating bookings...'
 
  vacances.user = leo
  vacances.animal = locky
+ vacances.total_price = total_price(vacances)
 
  vacances.save
 
@@ -207,6 +216,7 @@ puts 'Creating bookings...'
 
  vacances.user = leo
  vacances.animal = draco
+ vacances.total_price = total_price(vacances)
 
  vacances.save
 
@@ -216,9 +226,9 @@ puts 'Creating bookings...'
     starting_date:    Date.today - 34,
     ending_date:    Date.today - 15
   })
-
  vacances.user = leo
  vacances.animal = choupette
+ vacances.total_price = total_price(vacances)
 
  vacances.save
 
