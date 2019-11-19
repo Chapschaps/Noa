@@ -1,11 +1,5 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
-  before_action :set_user, only: [:index, :create]
-
-  def index
-    @bookings = current_user.bookings
-    raise
-  end
 
   def show
     @booking.total_price = total_price
@@ -18,6 +12,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.user = @user
+    @booking.total_price = total_price
     if @booking.save
       redirect_to user_path(@user)
     else
@@ -37,10 +32,6 @@ class BookingsController < ApplicationController
   end
 
   private
-
-  def set_user
-    @user = User.find(params([:user_id]))
-  end
 
   def set_booking
     @booking = Booking.find(params[:id])
