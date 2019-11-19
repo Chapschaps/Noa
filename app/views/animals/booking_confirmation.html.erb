@@ -1,0 +1,5 @@
+<%= simple_form_for [@animal, @booking] do |f| %>
+  <%= f.input :starting_date, as: :date, html5: true, input_html: { value: params[:starting_date] } %>
+  <%= f.input :ending_date, as: :date, html5: true %>
+  <%= f.submit :submit, class: "btn btn-primary" %>
+<% end %>
