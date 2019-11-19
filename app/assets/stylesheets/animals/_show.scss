@@ -1,11 +1,12 @@
 .card-show {
   overflow: hidden;
-  height: 300px;
+  height: 450px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
 }
 
 .card-description-show {
@@ -13,5 +14,25 @@
   width: 300px;
   object-fit: cover;
   text-align: center;
+  border : 1px solid #E4E4E4;
+  align-items: center;
+  padding-top: 20px;
+  margin-right: 200px;
 }
 
+#show-search-from {
+  border : 1px solid #E4E4E4;
+  height: 450px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title-show-animal {
+  margin-left: 100px;
+  padding-top: 30px;
+  border-bottom: 1px solid #E4E4E4;
+}
+
+.body-show-animal {
+  background: white;
+}
