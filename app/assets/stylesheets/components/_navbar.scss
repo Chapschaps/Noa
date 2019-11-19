@@ -2,8 +2,16 @@
   justify-content: space-between;
   background: white;
 }
+
 .navbar-home {
    background: transparent;
+   .nav-link  {
+     color: white !important;
+
+     &:hover{
+       opacity:0.5;
+     }
+  }
 }
 .navbar-noa .navbar-collapse {
   flex-grow: 0;
@@ -14,7 +22,7 @@
 }
 
 .nav-link  {
-  color: white !important;
+  color: white;
 
   &:hover{
     opacity:0.5;
