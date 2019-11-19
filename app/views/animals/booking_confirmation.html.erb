@@ -34,7 +34,7 @@
       <div class="card-animal-infos">
         <div>
           <h2><%= link_to @animal.name, animal_path(@animal) %></h2>
-          <p>    <%= @animal.specie %> <%= @animal.location %></p>
+          <p><%= @animal.specie %> <%= @animal.location %></p>
         </div>
         <h2 class="card-animal-pricing"> <%= "#{@animal.price}$/per day" %></h2>
         <%= cl_image_tag @animal.user.photo.key, height: 40, width: 40, crop: :fill, class: "card-animal-user avatar-bordered"  %>
