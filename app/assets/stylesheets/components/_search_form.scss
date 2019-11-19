@@ -3,7 +3,7 @@
   padding: 32px;
   margin: 32px;
   background-color: white;
-  width: 300px;
+  width: 400px;
   // height: 500px;
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 16px 40px;
@@ -12,22 +12,21 @@
 }
 
 .search-form h1 {
-  font-size: 18px;
+  font-size: 24px;
   color: #364f6b;;
   font-weight: bold;
 }
 
 .dates-inputs {
-
+  display: flex;
+  justify-content: space-between;
 }
-// .form-group {
-//   height: 20px;
-//   width: 100px;
-// }
+
 
 .form-group label {
   font-size: 14px;
   padding: 5px;
+  color: #364f6b;
 }
 
 .form-control {
