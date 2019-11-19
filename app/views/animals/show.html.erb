@@ -2,54 +2,57 @@
 
    <%= render 'shared/flashes' %>
   <br>
-  <div class="banner-animal-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/2194261/pexels-photo-2194261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);"></div>
-
+  <div class="banner-animal-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @animal.photo.key, gravity: :face %>');"></div>
   <div class="title-show-animal">
     <h1><%= "#{@animal.name}, #{@animal.specie}" %></h1>
   </div>
 
-  <h2>Informations</h2>
-
   <div class="card-show">
-    <div class="card-description-show">
-      <strong><%= @animal.description %></strong>
-      <h3>Location</h3>
-      <p><%= @animal.location %></p>
-      <h3>Sexe</h3>
-      <p><%= @animal.sexe %></p>
-      <h3>Size</h3>
-      <p><%= @animal.size %></p>
-      <h3>Age</h3>
-      <p><%= @animal.age %></p>
-      <h3>Risk factor</h3>
-      <% if @animal.risk_factor == "XXX" %>
-        <p style="color:red;"><strong>High</strong></p>
-      <% elsif @animal.risk_factor =="XX" %>
-        <p>Normal</p>
-      <% elsif @animal.risk_factor =="X" %>
-        <p style="color:green;"><strong>Low</strong></p>
-      <% end %>
-    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-8">
+        <div class="card-description-show">
+          <strong><%= @animal.description %></strong>
+          <h3>Location</h3>
+          <p><%= @animal.location %></p>
+          <h3>Sexe</h3>
+          <p><%= @animal.sexe %></p>
+          <h3>Size</h3>
+          <p><%= @animal.size %></p>
+          <h3>Age</h3>
+          <p><%= @animal.age %></p>
+          <h3>Risk factor</h3>
+          <% if @animal.risk_factor == "XXX" %>
+            <p style="color:red;"><strong>High</strong></p>
+          <% elsif @animal.risk_factor =="XX" %>
+            <p>Normal</p>
+          <% elsif @animal.risk_factor =="X" %>
+            <p style="color:green;"><strong>Low</strong></p>
+          <% end %>
+        </div>
+      </div>
 
-    <div class="search-form" id="show-search-from">
-      <h4>Add dates for prices</h4>
-      <br>
-      <%= form_tag animal_confirmation_path(@animal), method: :get do %>
-        <%= date_field_tag :starting_date %>
-        <br style="padding:200px;">
-        <%= date_field_tag :ending_date %>
-        <br>
-        <%= submit_tag "Reservez" %>
-      <% end %>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="search-form" id="show-search-from">
+          <h4>Add dates for prices</h4>
+          <br>
+          <%= form_tag animal_confirmation_path(@animal), method: :get do %>
+            <%= date_field_tag :starting_date %>
+            <br style="padding:200px;">
+            <%= date_field_tag :ending_date %>
+            <br>
+            <%= submit_tag "Reservez" %>
+            <% end %>
+        </div>
+      </div>
+      </div>
+      </div>
 <!--       <%#= simple_form_for [@animal, @booking] do |f| %>
         <%#= f.input :starting_date, as: :date, html5: true %>
         <%#= f.input :ending_date, as: :date, html5: true %>
         <%#= f.submit :submit, class: "btn btn-primary" %>
       <%# end %> -->
-    </div>
 
   </div>
-
   <h2>More animals you may like</h2>
   <br>
 
