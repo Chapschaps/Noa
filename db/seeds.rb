@@ -141,7 +141,7 @@ Illo cumque perspiciatis quia odio tempora facere est architecto labore qui expe
   })
 
 aslan.photo.attach(io: file, filename: 'aslan.jpg', content_type: 'image/jpg')
-aslan.user = leo
+aslan.user = nadia
 aslan.save
 
 
@@ -207,6 +207,7 @@ puts 'Creating bookings...'
 
  vacances.save
 
+ 
 
  vacances = Booking.new({
     status:      'canceled',
@@ -230,6 +231,7 @@ puts 'Creating bookings...'
  vacances.animal = choupette
 
  vacances.save
+ 
 
 puts 'Finished!'
 

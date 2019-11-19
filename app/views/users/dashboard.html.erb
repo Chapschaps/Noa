@@ -1,10 +1,40 @@
-<h1>Welcome <%= @user.username %></h1>
+<h1 class="m-3">Welcome <%= @user.username %></h1>
 
-<ul>
+
+<ul class="container mt-3">
+  <h2>Your Bookings:</h2>
   <% @user.bookings.each do |booking| %>
-    <%= booking.status %>
+    <div class="card-booking m-3">
+      <% if booking.animal.photo.attached? %>
+        <%= cl_image_tag booking.animal.photo.key, height: 400, width: 400, crop: :fill %>
+      <% else %>
+        <%= cl_image_tag "sample.jpg", height: 400, width: 400, crop: :fill %>
+      <% end %>
+      <div class="card-booking-infos">
+          <div>
+            <h2><%= "#{booking.animal.name} (#{booking.animal.specie})" %></h2>
+            <p>   <%= booking.animal.location %></p>
+            <p> <%= "Starts: #{booking.starting_date}." %></p>
+            <p class="mt-0"><%= "Ends: #{booking.ending_date}" %></p>
+          </div>
+          <div>
+            <h2><%= "Total Price: #{booking.total_price} $" %></h2>
+            <p> Status:
+              <%if booking.status == "requested" %>
+                <span class='text-warning'>Requested</span></p>
+              <%elsif booking.status == "validated" %>
+                <span class='text-success'>Validated</span></p>
+              <%elsif booking.status == "canceled" %>
+                <span class='text-danger'>Canceled</span></p>
+              <%elsif booking.status == "expired" %>
+                <span class='text-secondary'>Expired</span></p>
+              <%elsif booking.status == "Finished" %>
+                <span class='text-muted'>Done</span></p>
+              <% end %>
+          </div>
+      </div>
+    </div>
   <% end %>
 </ul>
-<%= link_to "See animals", animals_path, class: "btn btn-primary" %>
 
-<%= link_to "log out", destroy_user_session_path, method: :delete, class: "btn btn-danger"  %>
+  "expired" - grey, "finished"

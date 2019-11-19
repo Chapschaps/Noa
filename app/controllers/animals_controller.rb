@@ -7,6 +7,7 @@ class AnimalsController < ApplicationController
   end
 
   def show
+    @animals = Animal.all
     @animal = Animal.find(params[:id])
     @booking = Booking.new
   end
@@ -34,6 +35,11 @@ class AnimalsController < ApplicationController
     @animal = Animal.find(params[:id])
     @animal.delete
     redirect_to animals_path
+  end
+
+  def booking_confirmation
+    @animal = Animal.find(params[:animal_id])
+    @booking = Booking.new
   end
 
   private
