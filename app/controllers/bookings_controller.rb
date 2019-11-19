@@ -1,6 +1,5 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
-  before_action :set_user, only: [:index, :create]
 
   def index
     @bookings = @user.bookings
@@ -14,12 +13,14 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @animal = Animal.find(params[:animal_id])
     @booking = Booking.new(booking_params)
-    @booking.user = @user
+    @booking.user = current_user
+    @booking.animal = @animal
     if @booking.save
-      redirect_to user_path(@user)
+      redirect_to dashboard_path
     else
-      render :new
+      redirect_to root_path
     end
   end
 
@@ -35,10 +36,6 @@ class BookingsController < ApplicationController
   end
 
   private
-
-  def set_user
-    @user = User.find(params([:user_id]))
-  end
 
   def set_booking
     @booking = Booking.find(params[:id])

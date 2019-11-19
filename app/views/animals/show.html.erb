@@ -36,16 +36,11 @@
       <br>
       <%= form_tag animal_confirmation_path(@animal), method: :get do %>
         <%= date_field_tag :starting_date %>
-        <br style="padding:200px;">
+        <br>
         <%= date_field_tag :ending_date %>
         <br>
-        <%= submit_tag "Reservez" %>
+        <%= submit_tag "Choose this pet" %>
       <% end %>
-<!--       <%#= simple_form_for [@animal, @booking] do |f| %>
-        <%#= f.input :starting_date, as: :date, html5: true %>
-        <%#= f.input :ending_date, as: :date, html5: true %>
-        <%#= f.submit :submit, class: "btn btn-primary" %>
-      <%# end %> -->
     </div>
 
   </div>

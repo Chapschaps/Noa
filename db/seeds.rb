@@ -69,16 +69,7 @@ file = URI.open('https://images.unsplash.com/photo-1559096996-3b5e8f025ab3?ixlib
     sexe: 'Male',
     risk_factor:     'XXX',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!
-Nisi aliquid repellat, cumque sequi, fugiat quaerat impedit necessitatibus deleniti, ipsam sunt blanditiis asperiores illum quos. Quibusdam aliquam, dolores dolor assumenda mollitia. Magnam optio sunt nam sint cupiditate natus quam.
-Illo cumque perspiciatis quia odio tempora facere est architecto labore qui expedita officiis, laudantium tenetur in dolor molestias. Rem praesentium officia libero laborum, maxime ad explicabo ex voluptate illo nihil.
-Quos laudantium nam magni odit ducimus. Sunt aliquid qui exercitationem, doloribus, aliquam pariatur numquam quam voluptatem, ducimus voluptate eius mollitia molestiae nisi enim esse nam repellendus harum magni? Nesciunt, iusto.
-Necessitatibus nam fugiat enim voluptate, doloribus error nobis, sint magni quaerat hic accusantium, deserunt debitis earum repudiandae placeat ad quidem nulla labore consequatur amet iusto quae tempore, officia facilis? Similique.
-Tempore impedit reprehenderit repellendus, labore quo laboriosam quam. Repudiandae omnis ducimus necessitatibus eligendi esse possimus adipisci eius, sunt ea ipsam ex explicabo eaque nisi beatae reiciendis quam illum voluptatibus inventore.
-Quis illo iusto suscipit voluptas, error a dignissimos labore earum, quod hic eius architecto, eos voluptatibus reiciendis omnis sit dicta cupiditate expedita quidem voluptatem! Ducimus officiis asperiores ullam accusantium officia!
-Vitae nisi adipisci, asperiores quaerat et eius at alias corrupti quis illo, commodi quisquam. Aut a in aliquam nesciunt alias. Fugiat ea deleniti sunt nemo veniam libero voluptatem ab incidunt!
-Distinctio, ut asperiores praesentium omnis aut ipsum, quidem facere quibusdam magni necessitatibus cupiditate eaque sint autem saepe neque? Ad ipsa itaque excepturi magnam ratione quisquam illum esse facilis. Quidem, sapiente.
-Ex aliquid sequi esse fuga illo expedita perferendis laboriosam distinctio repudiandae provident exercitationem necessitatibus illum, architecto aut autem perspiciatis hic asperiores temporibus, repellat quidem! Sed blanditiis soluta explicabo in magnam.
-Nulla libero, accusantium adipisci ut nisi minus eum quia, pariatur unde praesentium expedita eaque quasi numquam placeat nam sequi voluptatem omnis. Facilis quae voluptatibus, voluptatem veniam laboriosam porro quos quod.',
+Nisi aliquid repellat, cumque sequi, fugiat quaerat impedit necessitatibus deleniti, ipsam sunt blanditiis asperiores illum quos. Quibusdam aliquam, dolores',
     age: 0,
     price: 0
   })
@@ -99,16 +90,7 @@ file = URI.open('https://images.unsplash.com/photo-1507146426996-ef05306b995a?ix
     sexe: 'Male',
     risk_factor:     'X',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!
-Nisi aliquid repellat, cumque sequi, fugiat quaerat impedit necessitatibus deleniti, ipsam sunt blanditiis asperiores illum quos. Quibusdam aliquam, dolores dolor assumenda mollitia. Magnam optio sunt nam sint cupiditate natus quam.
-Illo cumque perspiciatis quia odio tempora facere est architecto labore qui expedita officiis, laudantium tenetur in dolor molestias. Rem praesentium officia libero laborum, maxime ad explicabo ex voluptate illo nihil.
-Quos laudantium nam magni odit ducimus. Sunt aliquid qui exercitationem, doloribus, aliquam pariatur numquam quam voluptatem, ducimus voluptate eius mollitia molestiae nisi enim esse nam repellendus harum magni? Nesciunt, iusto.
-Necessitatibus nam fugiat enim voluptate, doloribus error nobis, sint magni quaerat hic accusantium, deserunt debitis earum repudiandae placeat ad quidem nulla labore consequatur amet iusto quae tempore, officia facilis? Similique.
-Tempore impedit reprehenderit repellendus, labore quo laboriosam quam. Repudiandae omnis ducimus necessitatibus eligendi esse possimus adipisci eius, sunt ea ipsam ex explicabo eaque nisi beatae reiciendis quam illum voluptatibus inventore.
-Quis illo iusto suscipit voluptas, error a dignissimos labore earum, quod hic eius architecto, eos voluptatibus reiciendis omnis sit dicta cupiditate expedita quidem voluptatem! Ducimus officiis asperiores ullam accusantium officia!
-Vitae nisi adipisci, asperiores quaerat et eius at alias corrupti quis illo, commodi quisquam. Aut a in aliquam nesciunt alias. Fugiat ea deleniti sunt nemo veniam libero voluptatem ab incidunt!
-Distinctio, ut asperiores praesentium omnis aut ipsum, quidem facere quibusdam magni necessitatibus cupiditate eaque sint autem saepe neque? Ad ipsa itaque excepturi magnam ratione quisquam illum esse facilis. Quidem, sapiente.
-Ex aliquid sequi esse fuga illo expedita perferendis laboriosam distinctio repudiandae provident exercitationem necessitatibus illum, architecto aut autem perspiciatis hic asperiores temporibus, repellat quidem! Sed blanditiis soluta explicabo in magnam.
-Nulla libero, accusantium adipisci ut nisi minus eum quia, pariatur unde praesentium expedita eaque quasi numquam placeat nam sequi voluptatem omnis. Facilis quae voluptatibus, voluptatem veniam laboriosam porro quos quod.',
+Nisi aliquid repellat, cumque sequi, ',
     age: 4,
     price: 300
   })
@@ -128,17 +110,7 @@ Nulla libero, accusantium adipisci ut nisi minus eum quia, pariatur unde praesen
     location: 'Marseille',
     sexe: 'Male',
     risk_factor:     'XXX',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!
-Nisi aliquid repellat, cumque sequi, fugiat quaerat impedit necessitatibus deleniti, ipsam sunt blanditiis asperiores illum quos. Quibusdam aliquam, dolores dolor assumenda mollitia. Magnam optio sunt nam sint cupiditate natus quam.
-Illo cumque perspiciatis quia odio tempora facere est architecto labore qui expedita officiis, laudantium tenetur in dolor molestias. Rem praesentium officia libero laborum, maxime ad explicabo ex voluptate illo nihil.
-Quos laudantium nam magni odit ducimus. Sunt aliquid qui exercitationem, doloribus, aliquam pariatur numquam quam voluptatem, ducimus voluptate eius mollitia molestiae nisi enim esse nam repellendus harum magni? Nesciunt, iusto.
-Necessitatibus nam fugiat enim voluptate, doloribus error nobis, sint magni quaerat hic accusantium, deserunt debitis earum repudiandae placeat ad quidem nulla labore consequatur amet iusto quae tempore, officia facilis? Similique.
-Tempore impedit reprehenderit repellendus, labore quo laboriosam quam. Repudiandae omnis ducimus necessitatibus eligendi esse possimus adipisci eius, sunt ea ipsam ex explicabo eaque nisi beatae reiciendis quam illum voluptatibus inventore.
-Quis illo iusto suscipit voluptas, error a dignissimos labore earum, quod hic eius architecto, eos voluptatibus reiciendis omnis sit dicta cupiditate expedita quidem voluptatem! Ducimus officiis asperiores ullam accusantium officia!
-Vitae nisi adipisci, asperiores quaerat et eius at alias corrupti quis illo, commodi quisquam. Aut a in aliquam nesciunt alias. Fugiat ea deleniti sunt nemo veniam libero voluptatem ab incidunt!
-Distinctio, ut asperiores praesentium omnis aut ipsum, quidem facere quibusdam magni necessitatibus cupiditate eaque sint autem saepe neque? Ad ipsa itaque excepturi magnam ratione quisquam illum esse facilis. Quidem, sapiente.
-Ex aliquid sequi esse fuga illo expedita perferendis laboriosam distinctio repudiandae provident exercitationem necessitatibus illum, architecto aut autem perspiciatis hic asperiores temporibus, repellat quidem! Sed blanditiis soluta explicabo in magnam.
-Nulla libero, accusantium adipisci ut nisi minus eum quia, pariatur unde praesentium expedita eaque quasi numquam placeat nam sequi voluptatem omnis. Facilis quae voluptatibus, voluptatem veniam laboriosam porro quos quod.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligend',
     age: 4,
     price: 200
   })
@@ -157,17 +129,7 @@ file = URI.open('https://images.unsplash.com/photo-1552410260-0fd9b577afa6?ixlib
     location: 'Narnia',
     sexe: 'Male',
     risk_factor:     'XX',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!
-Nisi aliquid repellat, cumque sequi, fugiat quaerat impedit necessitatibus deleniti, ipsam sunt blanditiis asperiores illum quos. Quibusdam aliquam, dolores dolor assumenda mollitia. Magnam optio sunt nam sint cupiditate natus quam.
-Illo cumque perspiciatis quia odio tempora facere est architecto labore qui expedita officiis, laudantium tenetur in dolor molestias. Rem praesentium officia libero laborum, maxime ad explicabo ex voluptate illo nihil.
-Quos laudantium nam magni odit ducimus. Sunt aliquid qui exercitationem, doloribus, aliquam pariatur numquam quam voluptatem, ducimus voluptate eius mollitia molestiae nisi enim esse nam repellendus harum magni? Nesciunt, iusto.
-Necessitatibus nam fugiat enim voluptate, doloribus error nobis, sint magni quaerat hic accusantium, deserunt debitis earum repudiandae placeat ad quidem nulla labore consequatur amet iusto quae tempore, officia facilis? Similique.
-Tempore impedit reprehenderit repellendus, labore quo laboriosam quam. Repudiandae omnis ducimus necessitatibus eligendi esse possimus adipisci eius, sunt ea ipsam ex explicabo eaque nisi beatae reiciendis quam illum voluptatibus inventore.
-Quis illo iusto suscipit voluptas, error a dignissimos labore earum, quod hic eius architecto, eos voluptatibus reiciendis omnis sit dicta cupiditate expedita quidem voluptatem! Ducimus officiis asperiores ullam accusantium officia!
-Vitae nisi adipisci, asperiores quaerat et eius at alias corrupti quis illo, commodi quisquam. Aut a in aliquam nesciunt alias. Fugiat ea deleniti sunt nemo veniam libero voluptatem ab incidunt!
-Distinctio, ut asperiores praesentium omnis aut ipsum, quidem facere quibusdam magni necessitatibus cupiditate eaque sint autem saepe neque? Ad ipsa itaque excepturi magnam ratione quisquam illum esse facilis. Quidem, sapiente.
-Ex aliquid sequi esse fuga illo expedita perferendis laboriosam distinctio repudiandae provident exercitationem necessitatibus illum, architecto aut autem perspiciatis hic asperiores temporibus, repellat quidem! Sed blanditiis soluta explicabo in magnam.
-Nulla libero, accusantium adipisci ut nisi minus eum quia, pariatur unde praesentium expedita eaque quasi numquam placeat nam sequi voluptatem omnis. Facilis quae voluptatibus, voluptatem veniam laboriosam porro quos quod.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantis',
     age: 20,
     price: 20
   })
@@ -187,16 +149,7 @@ file = URI.open('https://images.unsplash.com/photo-1530824395616-b1ec7fac4aff?ix
     sexe: 'Female',
     risk_factor:     'XX',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!
-Nisi aliquid repellat, cumque sequi, fugiat quaerat impedit necessitatibus deleniti, ipsam sunt blanditiis asperiores illum quos. Quibusdam aliquam, dolores dolor assumenda mollitia. Magnam optio sunt nam sint cupiditate natus quam.
-Illo cumque perspiciatis quia odio tempora facere est architecto labore qui expedita officiis, laudantium tenetur in dolor molestias. Rem praesentium officia libero laborum, maxime ad explicabo ex voluptate illo nihil.
-Quos laudantium nam magni odit ducimus. Sunt aliquid qui exercitationem, doloribus, aliquam pariatur numquam quam voluptatem, ducimus voluptate eius mollitia molestiae nisi enim esse nam repellendus harum magni? Nesciunt, iusto.
-Necessitatibus nam fugiat enim voluptate, doloribus error nobis, sint magni quaerat hic accusantium, deserunt debitis earum repudiandae placeat ad quidem nulla labore consequatur amet iusto quae tempore, officia facilis? Similique.
-Tempore impedit reprehenderit repellendus, labore quo laboriosam quam. Repudiandae omnis ducimus necessitatibus eligendi esse possimus adipisci eius, sunt ea ipsam ex explicabo eaque nisi beatae reiciendis quam illum voluptatibus inventore.
-Quis illo iusto suscipit voluptas, error a dignissimos labore earum, quod hic eius architecto, eos voluptatibus reiciendis omnis sit dicta cupiditate expedita quidem voluptatem! Ducimus officiis asperiores ullam accusantium officia!
-Vitae nisi adipisci, asperiores quaerat et eius at alias corrupti quis illo, commodi quisquam. Aut a in aliquam nesciunt alias. Fugiat ea deleniti sunt nemo veniam libero voluptatem ab incidunt!
-Distinctio, ut asperiores praesentium omnis aut ipsum, quidem facere quibusdam magni necessitatibus cupiditate eaque sint autem saepe neque? Ad ipsa itaque excepturi magnam ratione quisquam illum esse facilis. Quidem, sapiente.
-Ex aliquid sequi esse fuga illo expedita perferendis laboriosam distinctio repudiandae provident exercitationem necessitatibus illum, architecto aut autem perspiciatis hic asperiores temporibus, repellat quidem! Sed blanditiis soluta explicabo in magnam.
-Nulla libero, accusantium adipisci ut nisi minus eum quia, pariatur unde praesentium expedita eaque quasi numquam placeat nam sequi voluptatem omnis. Facilis quae voluptatibus, voluptatem veniam laboriosam porro quos quod.a',
+Nisi aliquid repellat, cumque sequi, fugiat quaerat impedit necessitatibus d',
     age: 12,
     price: 98
   })
