@@ -16,6 +16,8 @@ User.destroy_all
 
 
 
+
+
 puts 'Creating user...'
 
 
@@ -68,8 +70,10 @@ file = URI.open('https://images.unsplash.com/photo-1559096996-3b5e8f025ab3?ixlib
     location: 'Sydney',
     sexe: 'Male',
     risk_factor:     'XXX',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!
-Nisi aliquid repellat, cumque sequi, fugiat quaerat impedit necessitatibus deleniti, ipsam sunt blanditiis asperiores illum quos. Quibusdam aliquam, dolores',
+
+
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
+
     age: 0,
     price: 0
   })
@@ -89,8 +93,7 @@ file = URI.open('https://images.unsplash.com/photo-1507146426996-ef05306b995a?ix
     location: 'Paris',
     sexe: 'Male',
     risk_factor:     'X',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!
-Nisi aliquid repellat, cumque sequi, ',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
     age: 4,
     price: 300
   })
@@ -135,7 +138,7 @@ file = URI.open('https://images.unsplash.com/photo-1552410260-0fd9b577afa6?ixlib
   })
 
 aslan.photo.attach(io: file, filename: 'aslan.jpg', content_type: 'image/jpg')
-aslan.user = leo
+aslan.user = nadia
 aslan.save
 
 
@@ -155,7 +158,7 @@ Nisi aliquid repellat, cumque sequi, fugiat quaerat impedit necessitatibus d',
   })
 
 choupette.photo.attach(io: file, filename: 'choupette.jpg', content_type: 'image/jpg')
-choupette.user = leo
+choupette.user = nadia
 choupette.save
 
     test = Animal.new({
@@ -165,7 +168,7 @@ choupette.save
     location: 'oupse',
     sexe: 'Female',
     risk_factor:     'XX',
-    description: 'The king of Narnia',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
     age: 12,
     price: 666
   })
@@ -177,6 +180,11 @@ puts 'Finished!'
 
 puts 'Creating bookings...'
 
+ def total_price(booking)
+    nb_days = (booking.ending_date - booking.starting_date).to_i
+    nb_days * booking.animal.price
+  end
+
  vacances = Booking.new({
     status:      'requested',
     starting_date:    Date.today + 4,
@@ -184,9 +192,50 @@ puts 'Creating bookings...'
   })
 
  vacances.user = leo
- vacances.animal = locky
+ vacances.animal = aslan
+ vacances.total_price = total_price(vacances)
 
  vacances.save
+
+
+ vacances = Booking.new({
+    status:      'validated',
+    starting_date:    Date.today + 4,
+    ending_date:    Date.today + 15
+  })
+
+ vacances.user = leo
+ vacances.animal = locky
+ vacances.total_price = total_price(vacances)
+
+ vacances.save
+
+
+
+ vacances = Booking.new({
+    status:      'canceled',
+    starting_date:    Date.today - 14,
+    ending_date:    Date.today - 4
+  })
+
+ vacances.user = leo
+ vacances.animal = draco
+ vacances.total_price = total_price(vacances)
+
+ vacances.save
+
+
+ vacances = Booking.new({
+    status:      'finished',
+    starting_date:    Date.today - 34,
+    ending_date:    Date.today - 15
+  })
+ vacances.user = leo
+ vacances.animal = choupette
+ vacances.total_price = total_price(vacances)
+
+ vacances.save
+
 
 puts 'Finished!'
 
