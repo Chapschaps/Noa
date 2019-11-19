@@ -68,8 +68,8 @@ file = URI.open('https://images.unsplash.com/photo-1559096996-3b5e8f025ab3?ixlib
     location: 'Sydney',
     sexe: 'Male',
     risk_factor:     'XXX',
-    description: 'ugly dog',
-    age: 0,
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
+     age: 0,
     price: 0
   })
 
@@ -88,7 +88,7 @@ file = URI.open('https://images.unsplash.com/photo-1507146426996-ef05306b995a?ix
     location: 'Paris',
     sexe: 'Male',
     risk_factor:     'X',
-    description: 'this is Leo\'s dog',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
     age: 4,
     price: 300
   })
@@ -97,6 +97,26 @@ file = URI.open('https://images.unsplash.com/photo-1507146426996-ef05306b995a?ix
 
   romeo.user = leo
   romeo.save
+
+  file = URI.open('https://images.unsplash.com/photo-1525682691400-309fa6755eb5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80')
+
+
+  draco= Animal.new ({
+    name:      'Draco',
+    size:      'L',
+    specie:     'Snake',
+    location: 'Marseille',
+    sexe: 'Male',
+    risk_factor:     'XXX',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
+    age: 4,
+    price: 200
+  })
+
+ draco.photo.attach(io: file, filename: 'draco.jpg', content_type: 'image/jpg')
+
+  draco.user = nadia
+  draco.save
 
 file = URI.open('https://images.unsplash.com/photo-1552410260-0fd9b577afa6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
 
@@ -107,13 +127,13 @@ file = URI.open('https://images.unsplash.com/photo-1552410260-0fd9b577afa6?ixlib
     location: 'Narnia',
     sexe: 'Male',
     risk_factor:     'XX',
-    description: 'The king of Narnia',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
     age: 20,
     price: 20
   })
 
 aslan.photo.attach(io: file, filename: 'aslan.jpg', content_type: 'image/jpg')
-aslan.user = leo
+aslan.user = nadia
 aslan.save
 
 
@@ -126,13 +146,13 @@ file = URI.open('https://images.unsplash.com/photo-1530824395616-b1ec7fac4aff?ix
     location: 'Pigal',
     sexe: 'Female',
     risk_factor:     'XX',
-    description: 'The king of Narnia',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
     age: 12,
     price: 98
   })
 
 choupette.photo.attach(io: file, filename: 'choupette.jpg', content_type: 'image/jpg')
-choupette.user = leo
+choupette.user = nadia
 choupette.save
 
     test = Animal.new({
@@ -142,7 +162,7 @@ choupette.save
     location: 'oupse',
     sexe: 'Female',
     risk_factor:     'XX',
-    description: 'The king of Narnia',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
     age: 12,
     price: 666
   })
@@ -161,9 +181,47 @@ puts 'Creating bookings...'
   })
 
  vacances.user = leo
+ vacances.animal = aslan
+
+ vacances.save
+
+
+ vacances = Booking.new({
+    status:      'validated',
+    starting_date:    Date.today + 4,
+    ending_date:    Date.today + 15
+  })
+
+ vacances.user = leo
  vacances.animal = locky
 
  vacances.save
+
+
+
+ vacances = Booking.new({
+    status:      'canceled',
+    starting_date:    Date.today - 14,
+    ending_date:    Date.today - 4
+  })
+
+ vacances.user = leo
+ vacances.animal = draco
+
+ vacances.save
+
+
+ vacances = Booking.new({
+    status:      'finished',
+    starting_date:    Date.today - 34,
+    ending_date:    Date.today - 15
+  })
+
+ vacances.user = leo
+ vacances.animal = choupette
+
+ vacances.save
+
 
 puts 'Finished!'
 

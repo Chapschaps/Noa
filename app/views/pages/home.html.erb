@@ -2,7 +2,7 @@
   <%= render 'shared/navbar' %>
   <%= render 'shared/flashes' %>
 
-  <div class="search-form">
+  <div class="search-form-home">
     <form>
       <h1>Rent amazing animals and change your life</h1>
       <div class="form-group">
@@ -14,16 +14,18 @@
         <input type="text" class="form-control" id="Where" aria-describedby="Location" placeholder="Anywhere">
       </div>
       <div class="dates-inputs">
-        <div class="form-group">
+        <div class="form-group form-date">
           <label for="check-in">Check-in</label>
           <input type="date" class="form-control" id="check-in" placeholder="dd-mm-yyyy">
         </div>
-        <div class="form-group">
+        <div class="form-group form-date">
           <label for="check-out">Check-out</label>
           <input type="date" class="form-control" id="check-out" placeholder="dd-mm-yyyy">
         </div>
       </div>
+      <div class="button">
       <button type="submit" class="btn btn-primary">Search</button>
+      </div>
     </form>
   </div>
 </div>
@@ -33,26 +35,27 @@
   <div class="cards container">
     <% @best_animals.each do |animal| %>
       <div class="card-animal card-home">
-        <%= link_to animal_path(animal) do %>
-          <% if animal.photo.attached? %>
+           <% if animal.photo.attached? %>
             <%= cl_image_tag animal.photo.key, height: 200, width: 400, crop: :fill %>
           <% else %>
             <%= cl_image_tag "sample.jpg", height: 200, width: 400, crop: :fill %>
           <% end %>
-        <% end %>
+
         <div class="card-animal-infos">
           <div>
-            <h2><%= link_to animal.name, animal_path(animal) %></h2>
+            <h2><%= animal.name  %></h2>
             <p>    <%= animal.specie %> <%= animal.location %></p>
           </div>
           <h2 class="card-animal-pricing"> <%= "#{animal.price}$/per day" %></h2>
           <%= cl_image_tag animal.user.photo.key, height: 40, width: 40, crop: :fill, class: "card-animal-user avatar-bordered"  %>
          </div>
+         <%= link_to "", animal_path(animal), class: "card-link" %>
       </div>
     <% end %>
   </div>
 </div>
 
+<!--  -->
 
 
 
