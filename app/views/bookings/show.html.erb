@@ -1,21 +1,42 @@
-<div class="d-flex justify-content-around">
-  <div class="col-sm-4 p-10" style = "background-color: white">
-    <div class="container" >
-      <h1>Your booking with <%= @booking.animal.name %></h1>
+<div class= "description-booking p-20">
+  <div class="d-flex justify-content-around align-items-center">
+    <div class="col-sm-6 p-10" style = "background-color: white">
+      <div class="d-flex justify-content-around">
+        <div class="container" >
+          <h1>Your booking with <%= @booking.animal.name %></h1>
 
-      <p>Starting date : <%= @booking.starting_date %></p>
-      <p>Ending date : <%= @booking.ending_date %></p>
-      <p>Total Price : <%= @booking.total_price %></p>
+          <p>Starting date : <%= @booking.starting_date %></p>
+          <p>Ending date : <%= @booking.ending_date %></p>
+          <p>Total Price : <%= @booking.total_price %></p>
+        </div>
+      </div>
+    </div>
+    <div class= "img-animal">
+      <div class="card" style="width: 18rem;">
+        <%= cl_image_tag @booking.animal.photo.key, crop: :fill, class: "card-img-top" %>
+        <div class="card-body">
+          <ul class="card-text" style="list-style: none">
+            <li>Age: <%= @booking.animal.age %> </li>
+            <li>Size: <%= @booking.animal.size %> </li>
+            <li>Specie: <%= @booking.animal.specie %> </li>
+            <li>Location: <%= @booking.animal.location %> </li>
+            <li>Sexe: <%= @booking.animal.sexe %> </li>
+            <li>Risk Factor: <%= @booking.animal.risk_factor %> </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
+<br>
+<br>
 <h2>More animals you may like</h2>
 <br>
 
-  <div class="cards container" style="margin-bottom:100px;">
+  <div class="cards container  style="margin-bottom:100px;">
   <% Animal.all.each do |animal| %>
-    <% if @animal != animal %>
+    <% if @booking.animal != animal %>
       <div class="card-animal">
         <%= link_to animal_path(animal) do %>
           <% if animal.photo.attached? %>
