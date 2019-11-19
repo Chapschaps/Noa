@@ -1,8 +1,9 @@
 .card-show {
-  overflow: hidden;
-  height: 450px;
-  background: white;
   display: flex;
+  margin: 0px auto;
+  overflow: hidden;
+  height: 500px;
+  background: white;
   align-items: center;
   justify-content: center;
   margin-top: 50px;
@@ -14,19 +15,19 @@
 }
 
 .card-description-show {
-  height: 100%;
-  width: 300px;
+  // height: 100%;
+  width: 600px;
   object-fit: cover;
   text-align: center;
   border : 1px solid #E4E4E4;
   align-items: center;
   padding-top: 20px;
-  margin-right: 200px;
+  flex: grow;
 }
 
 #show-search-from {
   border : 1px solid #E4E4E4;
-  width: 30vh;
+  width: 250px;
   height: 450px;
   align-items: center;
   flex-direction: column;
