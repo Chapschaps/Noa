@@ -2,23 +2,32 @@
   <%= render 'shared/navbar_home' %>
   <%= render 'shared/flashes' %>
 
-
   <div class="search-form">
     <form>
+      <h1>Rent amazing animals and change your life</h1>
+      <div class="form-group form-check">
+        <label for="Animal">Specie</label>
+        <input type="select" class="form-control" id="Animal" aria-describedby="Specie" placeholder="Dog">
+      </div>
       <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <label for="Where">Location</label>
+        <input type="email" class="form-control" id="Where" aria-describedby="Location" placeholder="Anywhere">
       </div>
+      <div class="dates-inputs form-row">
         <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <label for="check-in">Check-in</label>
+          <input type="date" class="form-control" id="check-in" placeholder="dd-mm-yyyy">
+        </div>
+        <div class="form-group">
+          <label for="check-out">Check-out</label>
+          <input type="date" class="form-control" id="check-out" placeholder="dd-mm-yyyy">
+        </div>
       </div>
-        <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-      </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary">Search</button>
     </form>
   </div>
+</div>
+
+<div class="animal_suggestions">
+  <h1>Our best puppies</h1>
 </div>

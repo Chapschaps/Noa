@@ -4,6 +4,7 @@ class Animal < ApplicationRecord
   RISK_FACTOR = %w(X XX XXX XXXX XXXXX)
   belongs_to :user
   has_many :bookings
+  has_one_attached :photo
 
   validates :name, presence: true
   validates :age, presence: true
@@ -14,4 +15,6 @@ class Animal < ApplicationRecord
   validates :risk_factor, presence: true, inclusion: { in: RISK_FACTOR }
   validates :user, presence: true
   validates :description, presence: true
+  validates :price, presence: true
+  validates :available, presence: true
 end
