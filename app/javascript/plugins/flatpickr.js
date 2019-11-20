@@ -1,12 +1,13 @@
 import flatpickr from "flatpickr";
 import "flatpickr/dist/themes/confetti.css"; // Note this is important!
+if (document.querySelector('.datepicker')) {
+  flatpickr(".datepicker", {});
 
-flatpickr(".datepicker", {});
+  const el = document.getElementById('start');
+  flatpickr(el, {
+  });
 
-const el = document.getElementById('start');
-flatpickr(el, {
-});
-
-const ell = document.getElementById('end');
-flatpickr(ell, {
-});
+  const ell = document.getElementById('end');
+  flatpickr(ell, {
+  });
+}
