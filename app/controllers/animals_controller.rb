@@ -1,8 +1,12 @@
 class AnimalsController < ApplicationController
-
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
+    if params[:query].present?
+      @animals = Animal.search_by_location(params[:query])
+    else
+      @animals = Animal.all
+    end
     @animals = Animal.geocoded
     @markers = @animals.map do |animal|
       {
@@ -60,6 +64,6 @@ class AnimalsController < ApplicationController
   private
 
   def animal_params
-    params.require(:animal).permit(:name, :age, :size, :specie, :location, :sexe, :risk_factor, :user_id, :description, :price, :available, :starting_date, :ending_date)
+    params.require(:animal).permit(:name, :age, :size, :specie, :location, :sexe, :risk_factor, :user_id, :description, :price, :available, :starting_date, :ending_date, :query)
   end
 end

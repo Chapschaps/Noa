@@ -1,3 +1,12 @@
+<%= form_tag animals_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Search by location"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+
 <h1>Find your new best friend!</h1>
 <br>
 
