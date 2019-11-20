@@ -43,7 +43,7 @@
 <!--             <br style="padding:200px;">
  -->            <%= date_field_tag :ending_date %>
             <br>
- 
+
             <%= submit_tag "Choose this pet" %>
             <% end %>
         </div>
@@ -52,7 +52,7 @@
   </div>
 </div>
 
- 
+
 
   </div>
   <h2>More animals you may like</h2>
@@ -66,7 +66,7 @@
           <% if animal.photo.attached? %>
             <%= cl_image_tag animal.photo.key, height: 200, width: 400, crop: :fill %>
           <% else %>
-            <%= cl_image_tag "sample.jpg", height: 200, width: 400, crop: :fill %>
+            <%= image_tag "test.jpg", height: 200, width: 400, crop: :fill %>
           <% end %>
         <% end %>
         <div class="card-animal-infos">
