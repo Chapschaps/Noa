@@ -5,10 +5,9 @@ class AnimalsController < ApplicationController
     if params[:query].present?
       @animals = Animal.search_by_location(params[:query])
     else
-      @animals = Animal.all
+      @animals = Animal.geocoded
     end
-    @animals_geo = @animals.geocoded
-    @markers = @animals_geo.map do |animal|
+    @markers = @animals.map do |animal|
       {
         lat: animal.latitude,
         lng: animal.longitude,
