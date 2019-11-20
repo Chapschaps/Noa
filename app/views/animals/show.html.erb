@@ -77,6 +77,7 @@
           <h2 class="card-animal-pricing"> <%= "#{animal.price}$/per day" %></h2>
           <%= cl_image_tag animal.user.photo.key, height: 40, width: 40, crop: :fill, class: "card-animal-user avatar-bordered"  %>
          </div>
+         <%= link_to "", animal_path(animal), class: "card-link" %>
       </div>
     <% end %>
   <% end %>
