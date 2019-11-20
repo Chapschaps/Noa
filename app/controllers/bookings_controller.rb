@@ -35,6 +35,7 @@ class BookingsController < ApplicationController
 
   def destroy
     @booking.destroy
+    redirect_to dashboard_path
   end
 
   private
