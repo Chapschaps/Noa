@@ -1,7 +1,7 @@
 <% if params["action"] == 'home'%>
   <div class="navbar navbar-expand-sm navbar-light navbar-noa navbar-home">
 <% else %>
-  <div class="navbar navbar-expand-sm navbar-light navbar-noa">
+  <div class="navbar navbar-expand-sm navbar-light navbar-noa out-of-home">
 <% end %>
     <%= link_to animals_path, class: "navbar-brand" do %>
       <%= image_tag "logo-noe.png"%>
@@ -34,17 +34,16 @@
   <% else %>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
+        <li class="nav-item">
           <%= link_to "Rent an animal", animals_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#LoginModal">
+          <button type="button" class="login" data-toggle="modal" data-target="#LoginModal">
             Log in
           </button>
-
         </li>
       </ul>
     </div>

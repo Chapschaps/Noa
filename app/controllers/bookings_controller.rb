@@ -1,12 +1,9 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
-  before_action :set_user, only: [:index, :create]
 
-  def index
-    @bookings = @user.bookings
-  end
 
   def show
+    @booking.total_price = total_price
   end
 
   def new
@@ -14,12 +11,18 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @animal = Animal.find(params[:animal_id])
     @booking = Booking.new(booking_params)
-    @booking.user = @user
+
+    @booking.user = current_user
+    @booking.animal = @animal
+    @booking.total_price = total_price
+    @booking.status = "requested"
     if @booking.save
-      redirect_to user_path(@user)
+      redirect_to dashboard_path
     else
-      render :new
+      raise
+      redirect_to root_path
     end
   end
 
@@ -32,13 +35,10 @@ class BookingsController < ApplicationController
 
   def destroy
     @booking.destroy
+    redirect_to dashboard_path
   end
 
   private
-
-  def set_user
-    @user = User.find(params([:user_id]))
-  end
 
   def set_booking
     @booking = Booking.find(params[:id])
@@ -46,5 +46,10 @@ class BookingsController < ApplicationController
 
   def booking_params
     params.require(:booking).permit(:animal, :user, :status, :starting_date, :ending_date)
+  end
+
+  def total_price
+    nb_days = (@booking.ending_date - @booking.starting_date).to_i
+    nb_days * @booking.animal.price
   end
 end

@@ -38,14 +38,15 @@ class AnimalsController < ApplicationController
   end
 
   def booking_confirmation
+    require 'date'
     @animal = Animal.find(params[:animal_id])
     @booking = Booking.new
+    @price = params[:ending_day]
   end
 
   private
 
   def animal_params
-    params.require(:animal).permit(:name, :age, :size, :specie, :location, :sexe, :risk_factor, :user_id, :description, :price, :available)
+    params.require(:animal).permit(:name, :age, :size, :specie, :location, :sexe, :risk_factor, :user_id, :description, :price, :available, :starting_date, :ending_date)
   end
-
 end
