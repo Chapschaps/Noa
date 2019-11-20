@@ -1,23 +1,26 @@
+
 <div class= "description-booking p-20">
   <div class="d-flex justify-content-around align-items-center">
-    <div class="col-sm-6 p-10" style = "background-color: white">
-      <div class="d-flex justify-content-around">
-        <div class="container" >
+
+    <div class="col-sm-6 p-10 m-10" style = "background-color: white">
+<!--       <div class="d-flex justify-content-around">
+ -->        <div class="container" >
+          <%= link_to user_booking_path(@booking.user, @booking), method: :delete do %>
+             <i class="far fa-trash-alt text-right" id="corbeille"></i>
+          <% end %>
           <h1>Your booking with <%= @booking.animal.name %></h1>
 
           <p>Starting date : <%= @booking.starting_date %></p>
           <p>Ending date : <%= @booking.ending_date %></p>
-          <p>Total Price : <%= @booking.total_price %></p>
+          <p>Total Price : <%= @booking.total_price %> EUR</p>
         </div>
-        <div class="d-flex">
-          <%= link_to "Edit", edit_user_booking_path(@booking.user, @booking) %>
-        </div>
-        <div class="d-flex">
-          <%= link_to "Destroy", user_booking_path(@booking.user, @booking), method: :delete %>
+        <div class="d-flex text-align-right">
+          <%= link_to "Edit", edit_user_booking_path(@booking.user, @booking), class: "btn btn-primary text-right" %>
         </div>
       </div>
     </div>
     <div style="margin-top: 20px">
+
     <div class= "img-animal">
       <div class="card" style="width: 18rem;">
         <%= cl_image_tag @booking.animal.photo.key, crop: :fill, class: "card-img-top" %>

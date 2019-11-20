@@ -26,7 +26,7 @@ file = URI.open('https://avatars0.githubusercontent.com/u/53259210?v=4')
 
  leo = User.new( {
     username:      'chapschaps',
-    address:      'Paris',
+    address:      '3 rue mirbel, 75005, Paris',
     first_name:     'Leo',
     last_name: 'Chapute',
     contact: '0650399222',
@@ -140,7 +140,7 @@ file = URI.open('https://images.unsplash.com/photo-1559096996-3b5e8f025ab3?ixlib
     name:      'Locky',
     size:      'XS',
     specie:     'Dog',
-    location: 'Sydney',
+    location: '63 Rue Jean-Pierre Timbaud, 75011 Paris',
     sexe: 'Male',
     risk_factor:     'XXX',
 
@@ -183,7 +183,7 @@ file = URI.open('https://images.unsplash.com/photo-1507146426996-ef05306b995a?ix
     name:      'Draco',
     size:      'L',
     specie:     'Snake',
-    location: 'Marseille',
+    location: '52 Avenue de la République, 75011 Paris',
     sexe: 'Male',
     risk_factor:     'XXX',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligend',
@@ -202,7 +202,7 @@ file = URI.open('https://images.unsplash.com/photo-1552410260-0fd9b577afa6?ixlib
     name:      'Aslan',
     size:      'L',
     specie:     'Lion',
-    location: 'Narnia',
+    location: '3 rue mirbel, 75005, Paris',
     sexe: 'Male',
     risk_factor:     'XX',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
@@ -221,7 +221,7 @@ file = URI.open('https://images.unsplash.com/photo-1530824395616-b1ec7fac4aff?ix
     name:      'Choupette',
     size:      'XL',
     specie:     'Giraffe',
-    location: 'Pigal',
+    location: '3 rue mirbel, 75005, Paris',
     sexe: 'Female',
     risk_factor:     'XX',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
@@ -239,7 +239,7 @@ file = URI.open('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ix
     name:      'Titi',
     size:      'XS',
     specie:     'Cat',
-    location: 'London',
+    location: ' 4 Rue de l\'École Polytechnique, 75005 Paris',
     sexe: 'Male',
     risk_factor:     'X',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
@@ -258,7 +258,7 @@ file = URI.open('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ix
     name:      'Toto',
     size:      'S',
     specie:     'Cat',
-    location: 'London',
+    location: '1 Rue de Rivoli, 75001 Paris',
     sexe: 'Male',
     risk_factor:     'X',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
@@ -277,7 +277,7 @@ file = URI.open('https://images.unsplash.com/photo-1567201080580-bfcc97dae346?ix
     name:      'Martin',
     size:      'S',
     specie:     'Pig',
-    location: 'Washington',
+    location: '11 Boulevard Dugommier, 13001 Marseille',
     sexe: 'Male',
     risk_factor:     'X',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
@@ -298,7 +298,7 @@ file = URI.open('https://images.unsplash.com/photo-1567201080580-bfcc97dae346?ix
     name:      'Jay-Z',
     size:      'L',
     specie:     'Tiger',
-    location: 'LA',
+    location: '3 Avenue Bonneveine, 13008 Marseille',
     sexe: 'Male',
     risk_factor:     'XXX',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
@@ -318,7 +318,7 @@ file = URI.open('https://images.unsplash.com/photo-1537318574534-7bfff307c4f2?ix
     name:      'Nagini',
     size:      'L',
     specie:     'Snake',
-    location: 'LA',
+    location: '12 Place de la Gare, 59000 Lille',
     sexe: 'Male',
     risk_factor:     'XXXXX',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
@@ -331,14 +331,14 @@ file = URI.open('https://images.unsplash.com/photo-1537318574534-7bfff307c4f2?ix
  nagini.user = tom
  nagini.save
 
- file = URI.open('https://images.unsplash.com/photo-1559096996-3b5e8f025ab3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
+ file = URI.open('https://images.unsplash.com/photo-1425082661705-1834bfd09dca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=755&q=80')
 
 
- locky = Animal.new({
-    name:      'Locky',
+ rat = Animal.new({
+    name:      'max',
     size:      'XS',
-    specie:     'Dog',
-    location: 'Sydney',
+    specie:     'Rat',
+    location: '2 Rue de Douai, 59000 Lille',
     sexe: 'Male',
     risk_factor:     'XXX',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
@@ -346,30 +346,30 @@ file = URI.open('https://images.unsplash.com/photo-1537318574534-7bfff307c4f2?ix
     price: 0
   })
 
- locky.photo.attach(io: file, filename: 'locky.jpg', content_type: 'image/jpg')
+ rat.photo.attach(io: file, filename: 'rat.jpg', content_type: 'image/jpg')
 
- locky.user = nadia
+ rat.user = nadia
  locky.save
 
 file = URI.open('https://images.unsplash.com/photo-1507146426996-ef05306b995a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
 
 
-  romeo= Animal.new ({
+  lucy= Animal.new ({
     name:      'Romeo',
-    size:      'XS',
-    specie:     'Dog',
-    location: 'Paris',
-    sexe: 'Male',
-    risk_factor:     'X',
+    size:      'M',
+    specie:     'Racoon',
+    location: '235 Rue Pierre Legrand, 59000 Lille',
+    sexe: 'Female',
+    risk_factor:     'XX',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
     age: 4,
     price: 300
   })
 
- romeo.photo.attach(io: file, filename: 'romeo.jpg', content_type: 'image/jpg')
+ lucy.photo.attach(io: file, filename: 'lucy.jpg', content_type: 'image/jpg')
 
-  romeo.user = leo
-  romeo.save
+  lucy.user = leo
+  lucy.save
 
   file = URI.open('https://images.unsplash.com/photo-1525682691400-309fa6755eb5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80')
 
@@ -391,13 +391,13 @@ file = URI.open('https://images.unsplash.com/photo-1507146426996-ef05306b995a?ix
   draco.user = tom
   draco.save
 
-file = URI.open('https://images.unsplash.com/photo-1552410260-0fd9b577afa6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
+file = URI.open('https://images.unsplash.com/photo-1539418561314-565804e349c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80')
 
-    aslan = Animal.new({
-    name:      'Aslan',
+    julie = Animal.new({
+    name:      'Julie',
     size:      'L',
     specie:     'Lion',
-    location: 'Narnia',
+    location: '104 Boulevard Gambetta, 06000 Nice',
     sexe: 'Male',
     risk_factor:     'XX',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantis',
@@ -405,18 +405,18 @@ file = URI.open('https://images.unsplash.com/photo-1552410260-0fd9b577afa6?ixlib
     price: 20
   })
 
-aslan.photo.attach(io: file, filename: 'aslan.jpg', content_type: 'image/jpg')
-aslan.user = nadia
-aslan.save
+julie.photo.attach(io: file, filename: 'julie.jpg', content_type: 'image/jpg')
+julie.user = nadia
+julie.save
 
 
 file = URI.open('https://images.unsplash.com/photo-1530824395616-b1ec7fac4aff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
 
-    choupette = Animal.new({
-    name:      'Choupette',
-    size:      'XL',
-    specie:     'Giraffe',
-    location: 'Pigal',
+    maya = Animal.new({
+    name:      'Maya',
+    size:      'M',
+    specie:     'Dog',
+    location: 'Via della Croce, 8, 00187 Roma RM, Italy',
     sexe: 'Female',
     risk_factor:     'XX',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!
@@ -425,9 +425,9 @@ Nisi aliquid repellat, cumque sequi, fugiat quaerat impedit necessitatibus d',
     price: 98
   })
 
-choupette.photo.attach(io: file, filename: 'choupette.jpg', content_type: 'image/jpg')
-choupette.user = nadia
-choupette.save
+maya.photo.attach(io: file, filename: 'maya.jpg', content_type: 'image/jpg')
+maya.user = nadia
+maya.save
 
 file = URI.open('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=727&q=80')
 
@@ -435,7 +435,7 @@ file = URI.open('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ix
     name:      'Cupcake',
     size:      'XS',
     specie:     'Cat',
-    location: 'London',
+    location: '250 Avenue Georges Clemenceau, 92000 Nanterre',
     sexe: 'Male',
     risk_factor:     'X',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
@@ -454,7 +454,7 @@ file = URI.open('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ix
     name:      'Cookie',
     size:      'S',
     specie:     'Cat',
-    location: 'London',
+    location: '29 Espl. Charles de Gaulle, 92000 Nanterre',
     sexe: 'Male',
     risk_factor:     'X',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
@@ -467,82 +467,6 @@ file = URI.open('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ix
  cookie.user = boris
  cookie.save
 
-file = URI.open('https://images.unsplash.com/photo-1567201080580-bfcc97dae346?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
-
- martin = Animal.new({
-    name:      'Martin',
-    size:      'S',
-    specie:     'Pig',
-    location: 'Washington',
-    sexe: 'Male',
-    risk_factor:     'X',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
-    age: 8,
-    price: 150
-  })
-
- martin.photo.attach(io: file, filename: 'martin.jpg', content_type: 'image/jpg')
-
- martin.user = donald
- martin.save
-
-
- file = URI.open('https://images.unsplash.com/photo-1477764250597-dffe9f601ae8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
-
-
- jayz = Animal.new({
-    name:      'Jay-Z',
-    size:      'L',
-    specie:     'Tiger',
-    location: 'LA',
-    sexe: 'Male',
-    risk_factor:     'XXX',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
-    age: 8,
-    price: 150
-  })
-
- jayz.photo.attach(io: file, filename: 'jayz.jpg', content_type: 'image/jpg')
-
- jayz.user = donald
- jayz.save
-
-file = URI.open('https://images.unsplash.com/photo-1537318574534-7bfff307c4f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=731&q=80')
-
-
-  nagini = Animal.new({
-    name:      'Nagini',
-    size:      'L',
-    specie:     'Snake',
-    location: 'LA',
-    sexe: 'Male',
-    risk_factor:     'XXXXX',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
-    age: 8,
-    price: 450
-  })
-
- nagini.photo.attach(io: file, filename: 'nagini.jpg', content_type: 'image/jpg')
-
- nagini.user = tom
- nagini.save
-
-
-
-    test = Animal.new({
-    name:      'test_with_no_photo',
-    size:      'XL',
-    specie:     'pff',
-    location: 'oupse',
-    sexe: 'Female',
-    risk_factor:     'XX',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
-    age: 12,
-    price: 666
-  })
-
-test.user = leo
-test.save
 
 puts 'Finished!'
 
