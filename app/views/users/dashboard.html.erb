@@ -8,8 +8,8 @@
       <% if booking.animal.photo.attached? %>
         <%= cl_image_tag booking.animal.photo.key, height: 400, width: 400, crop: :fill, class: "animal-img" %>
       <% else %>
-        <%= cl_image_tag "sample.jpg", height: 400, width: 400, crop: :fill, class: "animal-img" %>
-      <% end %>
+      <%= image_tag "test.jpg", height: 200, width: 400, crop: :fill %>
+        <% end %>
       <div class="card-booking-infos">
           <div>
             <h2><%= "#{booking.animal.name} (#{booking.animal.specie})" %></h2>
