@@ -3,30 +3,38 @@
   <%= render 'shared/flashes' %>
 
   <div class="search-form-home">
-    <form>
-      <h1>Rent amazing animals and change your life</h1>
+    <h1>Rent amazing animals and change your life</h1>
+    <%= form_tag animals_path, method: :get do %>
       <div class="form-group">
-        <label for="Animal">Specie</label>
-        <input type="text" class="form-control" id="Animal" aria-describedby="Specie" placeholder="Dog">
+        <%= label_tag(:specie, "Specie") %>
+        <%= text_field_tag :specie,
+          params[:specie],
+          class: "form-control",
+          placeholder: "Dog"
+        %>
       </div>
       <div class="form-group">
-        <label for="Where">Location</label>
-        <input type="text" class="form-control" id="Where" aria-describedby="Location" placeholder="Anywhere">
+        <%= label_tag(:query, "Location") %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "London"
+        %>
       </div>
       <div class="dates-inputs">
         <div class="form-group form-date">
-          <label for="check-in">Check-in</label>
-          <input type="date" class="form-control" id="check-in" placeholder="dd-mm-yyyy">
+          <%= label_tag(:start_date, "Start Date") %>
+          <%= select_date Date.today, prefix: :start_date %>
         </div>
         <div class="form-group form-date">
-          <label for="check-out">Check-out</label>
-          <input type="date" class="form-control" id="check-out" placeholder="dd-mm-yyyy">
+            <%= label_tag(:end_date, "End Date") %>
+            <%= select_date Date.today, prefix: :end_date %>
+          </div>
         </div>
-      </div>
       <div class="button">
-      <button type="submit" class="btn btn-primary">Search</button>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
       </div>
-    </form>
+    <% end %>
   </div>
 </div>
 
