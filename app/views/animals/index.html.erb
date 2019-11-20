@@ -11,9 +11,9 @@
           <%= image_tag "test.jpg", height: 200, width: 400, crop: :fill %>
         <% end %>
        <div class="card-animal-infos">
-        <div>
+        <div class="text-right">
           <h2><%= animal.name %></h2>
-          <p>    <%= animal.specie %> <%= animal.location %></p>
+          <p><%= animal.specie %> <%= animal.location %></p>
         </div>
         <h2 class="card-animal-pricing"> <%= "#{animal.price}$/per day" %></h2>
         <%= cl_image_tag animal.user.photo.key, height: 40, width: 40, crop: :fill, class: "card-animal-user avatar-bordered"  %>
