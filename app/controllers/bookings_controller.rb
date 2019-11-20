@@ -19,12 +19,12 @@ class BookingsController < ApplicationController
     @booking.total_price = total_price
     @booking.status = "requested"
     if @booking.save
-      redirect_to dashboard_path
+      redirect_to  booking_path(@booking)
     else
-      raise
       redirect_to root_path
     end
   end
+
 
   def edit
   end

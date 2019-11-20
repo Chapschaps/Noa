@@ -7,12 +7,26 @@ class AnimalsController < ApplicationController
     else
       @animals = Animal.all
     end
+    @animals = Animal.geocoded
+    @markers = @animals.map do |animal|
+      {
+        lat: animal.latitude,
+        lng: animal.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { animal: animal })
+      }
+    end
   end
 
   def show
-    @animals = Animal.all
+    @animals = Animal.geocoded
     @animal = Animal.find(params[:id])
     @booking = Booking.new
+    @markers =
+     [{
+        lat: @animal.latitude,
+        lng: @animal.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { animal: @animal })
+      }]
   end
 
   def create

@@ -61,7 +61,7 @@ nadia.photo.attach(io: file, filename: 'nadia.jpg', content_type: 'image/jpg')
 
 
    boris = User.new ({
-    username:      'boris',
+    username:      'Boris',
     address:      'Londre',
     first_name:     'Boris',
     last_name: 'Papillard',
@@ -93,7 +93,7 @@ boris.save
 donald.photo.attach(io: file, filename: 'donald.jpg', content_type: 'image/jpg')
 donald.save
 
- file = URI.open('https://upload.wikimedia.org/wikipedia/en/a/a3/Lordvoldemort.jpg')
+ file = URI.open('https://hips.hearstapps.com/digitalspyuk.cdnds.net/18/03/1516016506-vhp.jpg?crop=0.598xw:1.00xh;0.254xw,0&resize=480:*')
 
 
 
@@ -163,7 +163,7 @@ file = URI.open('https://images.unsplash.com/photo-1507146426996-ef05306b995a?ix
     name:      'Romeo',
     size:      'XS',
     specie:     'Dog',
-    location: 'Paris',
+    location: "3 rue de la main d'or, 75011, Paris",
     sexe: 'Male',
     risk_factor:     'X',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
@@ -235,8 +235,8 @@ choupette.save
 
 file = URI.open('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=727&q=80')
 
- cupcake = Animal.new({
-    name:      'Cupcake',
+ titit = Animal.new({
+    name:      'Titi',
     size:      'XS',
     specie:     'Cat',
     location: 'London',
@@ -247,15 +247,15 @@ file = URI.open('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ix
     price: 21
   })
 
- cupcake.photo.attach(io: file, filename: 'cupcake.jpg', content_type: 'image/jpg')
+ titit.photo.attach(io: file, filename: 'titit.jpg', content_type: 'image/jpg')
 
- cupcake.user = boris
- cupcake.save
+ titit.user = boris
+ titit.save
 
  file = URI.open('https://images.unsplash.com/photo-1548247416-ec66f4900b2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=363&q=80')
 
- cookie = Animal.new({
-    name:      'Cookie',
+ toto = Animal.new({
+    name:      'Toto',
     size:      'S',
     specie:     'Cat',
     location: 'London',
@@ -266,10 +266,10 @@ file = URI.open('https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ix
     price: 10
   })
 
- cookie.photo.attach(io: file, filename: 'cookie.jpg', content_type: 'image/jpg')
+ toto.photo.attach(io: file, filename: 'toto.jpg', content_type: 'image/jpg')
 
- cookie.user = boris
- cookie.save
+ toto.user = boris
+ toto.save
 
 file = URI.open('https://images.unsplash.com/photo-1567201080580-bfcc97dae346?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
 
@@ -308,7 +308,7 @@ file = URI.open('https://images.unsplash.com/photo-1567201080580-bfcc97dae346?ix
 
  jayz.photo.attach(io: file, filename: 'jayz.jpg', content_type: 'image/jpg')
 
- jayz.user = donald
+ jayz.user = beyonce
  jayz.save
 
 file = URI.open('https://images.unsplash.com/photo-1537318574534-7bfff307c4f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=731&q=80')
