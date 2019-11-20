@@ -166,14 +166,14 @@ file = URI.open('https://images.unsplash.com/photo-1507146426996-ef05306b995a?ix
     location: "3 rue de la main d'or, 75011, Paris",
     sexe: 'Male',
     risk_factor:     'X',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
-    age: 4,
+    description: 'Romeo is a lovely puppy who loves playing with you. He is potty trained and does not bark too much. You will not regret renting him from me!',
+    age: 1,
     price: 300
   })
 
  romeo.photo.attach(io: file, filename: 'romeo.jpg', content_type: 'image/jpg')
 
-  romeo.user = leo
+  romeo.user = boris
   romeo.save
 
   file = URI.open('https://images.unsplash.com/photo-1525682691400-309fa6755eb5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80')
