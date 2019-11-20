@@ -14,14 +14,11 @@
 }
 
 .description-map {
-  height: 650px;
-  object-fit: cover;
-  text-align: center;
+  height: 550px;
+  text-align: left;
   align-items: center;
-  padding-top: 20px;
+  margin-top: 20px;
   flex: grow;
-  background-color: #F4F4F4;
-  box-shadow: 12px 12px 2px 1px rgba(253, 16, 21, .2);
 }
 
 .card-description-show p {
@@ -29,12 +26,12 @@
   padding: 15px;
 }
 
-#show-search-form {
+.search-form {
   border : 1px solid #E4E4E4;
   // width: 250px;
   // height: 350px;
   position: sticky;
-  // top: 0;
+  top: 0;
   align-items: center;
   flex-direction: column;
   // padding: 30px;
