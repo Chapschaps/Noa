@@ -1,87 +1,86 @@
-<div class="body-show-animal">
+<%= render 'shared/flashes' %>
 
-   <%= render 'shared/flashes' %>
-  <br>
-  <div class="banner-animal-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @animal.photo.key, gravity: :face %>');"></div>
+<div class="banner-animal-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @animal.photo.key%>'); background-position: inherit;"></div>
+
+<div class="container">
   <div class="title-show-animal">
     <h1><%= "#{@animal.name}, #{@animal.specie}" %></h1>
   </div>
 
-  <div class="card-show">
-    <div class="row">
-      <div class="col-8">
-        <div class="card-description-show">
-          <p id="animal-description"><%= @animal.description %></p>
-          <br />
+  <p id="animal-description"><%= @animal.description %></p>
 
-          <h3> - Location : <%= @animal.location %> </h3>
-<!--           <p><%= @animal.location %></p>
--->       <h3> - Sexe : <%= @animal.sexe %> </h3>
-<!--           <p><%= @animal.sexe %></p>
--->       <h3> - Size : <%= @animal.size %> </h3>
-<!--           <p><%= @animal.size %></p>
--->       <h3> - Age : <%= @animal.age %> </h3>
-<!--           <p><%= @animal.age %></p>
--->       <h3> - Risk factor :
-            <% if @animal.risk_factor == "XXX" %>
-              <p style="color:red;"><strong>High</strong></p>
-            <% elsif @animal.risk_factor =="XX" %>
-              <p>Normal</p>
-            <% elsif @animal.risk_factor =="X" %>
-              <p style="color:green;"><strong>Low</strong></p>
-            <% end %>
-          </h3>
-        </div>
+  <div class="row">
+    <div class="d-flex">
+       <div class="description-map col-8">
+          <div class="card-description-show">
+            <br />
+
+            <h3> - Location : <%= @animal.location %> </h3>
+            <h3> - Sexe : <%= @animal.sexe %> </h3>
+            <h3> - Size : <%= @animal.size %> </h3>
+            <h3> - Age : <%= @animal.age %> </h3>
+            <h3> - Risk factor :
+              <% if @animal.risk_factor == "XXX" %>
+                <p style="color:red;"><strong>High</strong></p>
+              <% elsif @animal.risk_factor =="XX" %>
+                <p>Normal</p>
+              <% elsif @animal.risk_factor =="X" %>
+                <p style="color:green;"><strong>Low</strong></p>
+              <% end %>
+            </h3>
+          </div>
+
+  <!-- MAP -->
+
+          <div
+            id="map"
+            class="map-show";
+            style="width: 100%;
+            height: 600px;"
+            data-markers="<%= @markers.to_json %>"
+            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+          ></div>
       </div>
 
-      <div class="col-4">
-<!--         <div class="search-form" id="show-search-form">
- -->          <h2>Add dates</h2>
+      <div class="search-form" id="show-search-form">
+        <h2>Add dates</h2>
+        <br>
+        <%= form_tag animal_confirmation_path(@animal), method: :get do %>
+          <%= date_field_tag :starting_date %>
+          <%= date_field_tag :ending_date %>
           <br>
-          <%= form_tag animal_confirmation_path(@animal), method: :get do %>
-            <%= date_field_tag :starting_date %>
-<!--             <br style="padding:200px;">
- -->            <%= date_field_tag :ending_date %>
-            <br>
- 
-            <%= submit_tag "Choose this pet" %>
-            <% end %>
-        </div>
+          <%= submit_tag "Choose this pet" %>
+        <% end %>
       </div>
     </div>
   </div>
-</div>
 
- 
 
-  </div>
   <h2>More animals you may like</h2>
   <br>
 
   <div class="cards container" style="margin-bottom:100px;">
-  <% @animals.each do |animal| %>
-    <% if @animal != animal %>
-      <div class="card-animal">
-        <%= link_to animal_path(animal) do %>
-          <% if animal.photo.attached? %>
-            <%= cl_image_tag animal.photo.key, height: 200, width: 400, crop: :fill %>
-          <% else %>
-            <%= cl_image_tag "sample.jpg", height: 200, width: 400, crop: :fill %>
+    <% @animals.each do |animal| %>
+      <% if @animal != animal %>
+        <div class="card-animal">
+          <%= link_to animal_path(animal) do %>
+            <% if animal.photo.attached? %>
+              <%= cl_image_tag animal.photo.key, height: 200, width: 400, crop: :fill %>
+            <% else %>
+              <%= cl_image_tag "sample.jpg", height: 200, width: 400, crop: :fill %>
+            <% end %>
           <% end %>
-        <% end %>
-        <div class="card-animal-infos">
-          <div>
-            <h2><%= link_to animal.name, animal_path(animal) %></h2>
-            <p>    <%= animal.specie %> <%= animal.location %></p>
-          </div>
-          <h2 class="card-animal-pricing"> <%= "#{animal.price}$/per day" %></h2>
-          <%= cl_image_tag animal.user.photo.key, height: 40, width: 40, crop: :fill, class: "card-animal-user avatar-bordered"  %>
-         </div>
-      </div>
+          <div class="card-animal-infos">
+            <div>
+              <h2><%= link_to animal.name, animal_path(animal) %></h2>
+              <p>    <%= animal.specie %> <%= animal.location %></p>
+            </div>
+            <h2 class="card-animal-pricing"> <%= "#{animal.price}$/per day" %></h2>
+            <%= cl_image_tag animal.user.photo.key, height: 40, width: 40, crop: :fill, class: "card-animal-user avatar-bordered"  %>
+           </div>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
-</div>
-
-
+  </div>
 </div>
 

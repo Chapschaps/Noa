@@ -163,7 +163,7 @@ file = URI.open('https://images.unsplash.com/photo-1507146426996-ef05306b995a?ix
     name:      'Romeo',
     size:      'XS',
     specie:     'Dog',
-    location: 'Paris',
+    location: "3 rue de la main d'or, 75011, Paris",
     sexe: 'Male',
     risk_factor:     'X',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cupiditate officiis enim eius tempora optio repellendus dolor deleniti odit sint dicta excepturi sequi explicabo, illum accusantium eligendi beatae! Unde, aperiam!',
