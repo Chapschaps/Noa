@@ -31,15 +31,15 @@
 </div>
 
 <div class="top-animals">
-  <h1>Our best puppies</h1>
+  <h1>Most popular pets</h1>
   <div class="cards container">
     <% @best_animals.each do |animal| %>
       <div class="card-animal card-home">
            <% if animal.photo.attached? %>
             <%= cl_image_tag animal.photo.key, height: 200, width: 400, crop: :fill %>
            <% else %>
-             <%= cl_image_tag “sample.jpg”, height: 200, width: 400, crop: :fill %>
-           <% end %>
+          <%= image_tag "test.jpg", height: 200, width: 400, crop: :fill %>
+             <% end %>
 
         <div class="card-animal-infos">
           <div>
