@@ -17,20 +17,28 @@
         </div>
       </div>
     </div>
+    <div style="margin-top: 20px">
     <div class= "img-animal">
       <div class="card" style="width: 18rem;">
         <%= cl_image_tag @booking.animal.photo.key, crop: :fill, class: "card-img-top" %>
         <div class="card-body">
           <ul class="card-text" style="list-style: none">
-            <li>Age: <%= @booking.animal.age %> </li>
-            <li>Size: <%= @booking.animal.size %> </li>
-            <li>Specie: <%= @booking.animal.specie %> </li>
-            <li>Location: <%= @booking.animal.location %> </li>
-            <li>Sexe: <%= @booking.animal.sexe %> </li>
-            <li>Risk Factor: <%= @booking.animal.risk_factor %> </li>
-          </ul>
+            <li> <i class="fas fa-venus-mars"></i> Sexe : <%= @booking.animal.sexe %> </li>
+            <li> <i class="fas fa-arrows-alt-v"></i> Size : <%= @booking.animal.size %> </li>
+            <li> <i class="fas fa-universal-access"></i> Age : <%= @booking.animal.age %> </li>
+            <li> <i class="fas fa-exclamation-triangle"></i> Risk factor :
+              <% if @booking.animal.risk_factor == "XXX" %>
+                <i style="color:red;"><strong>High</strong></p>
+              <% elsif @booking.animal.risk_factor =="XX" %>
+                <i style="color:blue;"><strong>Normal</strong></p>
+              <% elsif @booking.animal.risk_factor =="X" %>
+                <i style="color:green;"><strong>Low</strong></p>
+              <% end %>
+            </li>
+            <li><i style="color:grey;"> <i class="fas fa-search-location"></i> Location : <%= @booking.animal.location %> </li>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </div>
