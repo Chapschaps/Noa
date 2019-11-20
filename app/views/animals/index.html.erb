@@ -8,7 +8,7 @@
          <% if animal.photo.attached? %>
           <%= cl_image_tag animal.photo.key, height: 200, width: 400, crop: :fill %>
         <% else %>
-          <%= cl_image_tag "sample.jpg", height: 200, width: 400, crop: :fill %>
+          <%= image_tag "test.jpg", height: 200, width: 400, crop: :fill %>
         <% end %>
        <div class="card-animal-infos">
         <div>
