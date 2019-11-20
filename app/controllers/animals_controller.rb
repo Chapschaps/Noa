@@ -7,8 +7,8 @@ class AnimalsController < ApplicationController
     else
       @animals = Animal.all
     end
-    @animals = Animal.geocoded
-    @markers = @animals.map do |animal|
+    @animals_geo = @animals.geocoded
+    @markers = @animals_geo.map do |animal|
       {
         lat: animal.latitude,
         lng: animal.longitude,
