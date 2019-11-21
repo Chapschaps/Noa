@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
   resources :bookings, only: [:show]
   resources :users, except: [:index, :show] do
-    resources :bookings, only: [:index, :edit, :update, :destroy]
+  resources :bookings, only: [:index, :edit, :update, :destroy]
   end
 
   get '/dashboard', to: 'users#dashboard', as: 'dashboard'
