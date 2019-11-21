@@ -7,6 +7,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :animals, dependent: :destroy
   has_many :bookings
+  has_many :reviews
   validates :username, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
   validates :address, presence: true

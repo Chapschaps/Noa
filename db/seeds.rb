@@ -173,7 +173,7 @@ file = URI.open('https://images.unsplash.com/photo-1507146426996-ef05306b995a?ix
 
  romeo.photo.attach(io: file, filename: 'romeo.jpg', content_type: 'image/jpg')
 
-  romeo.user = boris
+  romeo.user = leo
   romeo.save
 
   file = URI.open('https://images.unsplash.com/photo-1525682691400-309fa6755eb5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80')
@@ -351,11 +351,11 @@ file = URI.open('https://images.unsplash.com/photo-1537318574534-7bfff307c4f2?ix
  rat.user = nadia
  locky.save
 
-file = URI.open('https://images.unsplash.com/photo-1507146426996-ef05306b995a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
+file = URI.open('https://images.unsplash.com/photo-1497752531616-c3afd9760a11?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
 
 
   lucy= Animal.new ({
-    name:      'Romeo',
+    name:      'Lucy',
     size:      'M',
     specie:     'Racoon',
     location: '235 Rue Pierre Legrand, 59000 Lille',
@@ -534,18 +534,18 @@ puts 'Creating bookings...'
     ending_date:    Date.today + 23
   })
  vacances.user = donald
- vacances.animal = cupcake
+ vacances.animal = lucy
  vacances.total_price = total_price(vacances)
 
  vacances.save
 
   vacances = Booking.new({
     status:      'accepted',
-    starting_date:    Date.today + 4,
-    ending_date:    Date.today + 15
+    starting_date:    Date.today + 14,
+    ending_date:    Date.today + 18
   })
  vacances.user = tom
- vacances.animal = cupcake
+ vacances.animal = romeo
  vacances.total_price = total_price(vacances)
 
  vacances.save
@@ -557,7 +557,7 @@ puts 'Creating bookings...'
     ending_date:    Date.today + 12
   })
  vacances.user = nadia
- vacances.animal = martin
+ vacances.animal = romeo
  vacances.total_price = total_price(vacances)
 
  vacances.save
@@ -568,7 +568,7 @@ puts 'Creating bookings...'
     ending_date:    Date.today + 15
   })
  vacances.user = boris
- vacances.animal = nagini
+ vacances.animal = lucy
  vacances.total_price = total_price(vacances)
 
  vacances.save

@@ -1,3 +1,28 @@
+.card-animal-dashboard {
+  background-size: cover;
+  margin: 1em;
+  background-position: center;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  position: relative;
+  .card-link{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+
 .card-animal {
   overflow: hidden;
   background: white;
@@ -70,7 +95,7 @@ border-radius: 3px;
 
 .card-booking {
   overflow: hidden;
-  height: 120px;
+  height: 170px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -89,7 +114,7 @@ border-radius: 3px;
 
 .card-booking .animal-img {
   height: 100%;
-  width: 120px;
+  width: 170px;
   object-fit: cover;
 }
 
@@ -109,12 +134,16 @@ border-radius: 3px;
 
 .card-booking .card-booking-infos {
   padding: 16px;
-   padding: 16px;
+  padding: 16px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
   width: 100%;
+
+  h2{
+    text-align: left;
+  }
  }
 
 

@@ -1,9 +1,10 @@
 import "bootstrap";
-import "../plugins/flatpickr";
 
 import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the stylesheet_pack_tag in the layout!
 
 import { initMapbox } from '../plugins/init_mapbox';
+
+import "../plugins/tab";
 
 initMapbox();
 
@@ -28,3 +29,5 @@ for (var i = 0; i < bubblyButtons.length; i++) {
 for (var i = 0; i < bubblyButtons.length; i++) {
   bubblyButtons[i].addEventListener('click', animateButton, false);
 }
+
+import "../plugins/flatpickr";
