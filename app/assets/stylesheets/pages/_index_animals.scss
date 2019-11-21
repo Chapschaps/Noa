@@ -5,10 +5,19 @@
   color: white;
 }
 
+a.button-link.animate{
+  color:white;
+  text-decoration:none;
+}
+
+a.button-link{
+  color:white;
+}
+
 $fuschia: #FF5B5C;
 $button-bg: $fuschia;
-$button-text-color: #fff;
-$baby-blue: #f8faff;
+$button-text-color: white;
+$baby-blue: white;
 
 body{
   font-size: 16px;
@@ -17,6 +26,7 @@ body{
   background-color: $baby-blue;
 }
 .bubbly-button{
+  max-height: 55px;
   font-family: 'Helvetica', 'Arial', sans-serif;
   display: inline-block;
   font-size: 1em;
