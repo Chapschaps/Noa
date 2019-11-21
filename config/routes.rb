@@ -5,7 +5,9 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create]
     get '/confirmation', to: 'animals#booking_confirmation', as: 'confirmation'
   end
-  resources :bookings, only: [:show]
+  resources :bookings, only: [:show] do
+    resources :reviews, only: [:create]
+  end
   resources :users, except: [:index, :show] do
   resources :bookings, only: [:index, :edit, :update, :destroy]
   end
