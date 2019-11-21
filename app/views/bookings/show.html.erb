@@ -14,8 +14,8 @@
           <p>Ending date : <%= @booking.ending_date %></p>
           <p>Total Price : <%= @booking.total_price %> EUR</p>
         </div>
-        <div class="d-flex text-align-right">
-          <%= link_to "Edit", edit_user_booking_path(@booking.user, @booking), class: "btn btn-primary text-right" %>
+        <div class="bubbly-button button-all">
+          <%= link_to "Edit", edit_user_booking_path(@booking.user, @booking), class: "button-link" %>
         </div>
       </div>
 
