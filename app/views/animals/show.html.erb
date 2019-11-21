@@ -1,6 +1,10 @@
 <%= render 'shared/flashes' %>
 
-<div class="banner-animal-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @animal.photo.key%>'); background-position: inherit;"></div>
+<% if @animal.photo.attached? %>
+  <div class="banner-animal-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @animal.photo.key%>'); background-position: inherit;"></div>
+ <% else %>
+ <div class="banner-animal-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "test.jpg"%>'); background-position: inherit;"></div>
+<% end %>
 
 <div class="container">
   <div class="title-show-animal">
@@ -69,7 +73,7 @@
             <% if animal.photo.attached? %>
               <%= cl_image_tag animal.photo.key, height: 200, width: 400, crop: :fill%>
             <% else %>
-              <%= cl_image_tag "test.jpg", height: 200, width: 400, crop: :fill %>
+              <%= image_tag "test.jpg", height: 200, width: 400, crop: :fill %>
             <% end %>
           <% end %>
           <div class="card-animal-infos">
