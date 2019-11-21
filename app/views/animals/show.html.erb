@@ -50,15 +50,15 @@
       <div class="search-form align-items-center" id="show-search-form">
         <h2><i class="far fa-calendar-alt"></i>  Add dates</h2>
         <br>
-        <%= form_with url: animal_confirmation_path(@animal), method: :get do |form| %>
+        <%= form_tag animal_confirmation_path(@animal), method: :get do %>
           <div class="dates-inputs">
             <div class="form-group form-date">
               <%= label_tag(:starting_date, "Start Date") %>
-              <%= form.date_field :starting_date, id:'start' %>
+              <%= date_field_tag :starting_date, id:'start' %>
             </div>
             <div class="form-group form-date">
               <%= label_tag(:starting_date, "Start Date") %>
-              <%= form.date_field :ending_date, id:'end' %>
+              <%= date_field_tag :ending_date, id:'end' %>
             </div>
           </div>
           <br>
@@ -77,9 +77,9 @@
         <div class="card-animal">
           <%= link_to animal_path(animal) do %>
             <% if animal.photo.attached? %>
-              <%= cl_image_tag animal.photo.key, height: 200, width: 400, crop: :fill %>
+              <%= cl_image_tag animal.photo.key, height: 200, width: 400, crop: :fill%>
             <% else %>
-              <%= cl_image_tag "sample.jpg", height: 200, width: 400, crop: :fill %>
+              <%= cl_image_tag "test.jpg", height: 200, width: 400, crop: :fill %>
             <% end %>
           <% end %>
           <div class="card-animal-infos">
