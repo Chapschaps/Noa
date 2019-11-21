@@ -1,15 +1,18 @@
-<%= form_tag animals_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Search by location"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
+<br>
+<br>
+ <div class="form-inline search-by-location">
+
+  <%= form_tag animals_path, method: :get do %>
+    <%= text_field_tag :query, params[:query],
+      placeholder: "Search by location"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary btn submit-search" %>
+    <% end %>
+  </div>
 
 <div class="container">
 <% if params[:query].present? %>
-<h2><%= @animals.count %> animals found in <%= params[:query] %></h2>
+<h2 id="show-results"><%= @animals.count %> animals found in <%= params[:query] %></h2>
 <% end %>
 <br>
 

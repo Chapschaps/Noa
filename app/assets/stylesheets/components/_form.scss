@@ -7,3 +7,36 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.search-by-location {
+  width: 70%;
+  text-align: center;
+  margin-left: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right: auto;
+  display: inline;
+
+
+  #query {
+    width : 35%;
+    border-radius: 5px;
+    height: 40px;
+    border: 0;
+    padding-left: 9px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+
+  .submit-search {
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+
+  }
+}
+
+#show-results {
+  text-align: left;
+  font-size: 18px;
+  padding-bottom: 0;
+}
