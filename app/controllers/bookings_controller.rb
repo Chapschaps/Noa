@@ -1,10 +1,8 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
 
-
   def show
     @booking.total_price = total_price
-    @review = Review.new
   end
 
   def new
@@ -20,12 +18,11 @@ class BookingsController < ApplicationController
     @booking.total_price = total_price
     @booking.status = "requested"
     if @booking.save
-      redirect_to  booking_path(@booking)
+      redirect_to booking_path(@booking)
     else
       redirect_to root_path
     end
   end
-
 
   def edit
   end
