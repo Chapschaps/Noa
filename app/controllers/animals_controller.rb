@@ -28,8 +28,13 @@ class AnimalsController < ApplicationController
       }]
   end
 
+  def new
+    @animal = Animal.new
+  end
+
   def create
     @animal = Animal.new(animal_params)
+    @animal.user = current_user
     @animal.save
     redirect_to animal_path(@animal)
   end
@@ -63,6 +68,6 @@ class AnimalsController < ApplicationController
   private
 
   def animal_params
-    params.require(:animal).permit(:name, :age, :size, :specie, :location, :sexe, :risk_factor, :user_id, :description, :price, :available, :starting_date, :ending_date, :query)
+    params.require(:animal).permit(:name, :age, :size, :specie, :location, :sexe, :photo, :risk_factor, :user_id, :description, :price, :available, :starting_date, :ending_date, :query)
   end
 end
