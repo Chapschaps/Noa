@@ -1,3 +1,8 @@
-<h2><%= animal.name %></h2>
-<p><%= animal.location %></p>
-<%= cl_image_tag animal.photo, :style => "width: 100%"%>
+ 
+ <div class="card-animal-map">
+  <h2><%= animal.name %></h2>
+  <p><%= animal.location %></p>
+  <%= image_tag animal.photo, :style => "width: 100%"%>
+  <%= link_to "", animal_path(animal), class: "card-link" %>
+</div>
+ 
