@@ -8,8 +8,10 @@
 <% end %>
 
 <div class="container">
-  <h1>Find your new best friend!</h1>
-  <br>
+<% if params[:query].present? %>
+<h2><%= @animals.count %> animals found in <%= params[:query] %></h2>
+<% end %>
+<br>
 
   <div class="d-flex">
     <div class="row">
