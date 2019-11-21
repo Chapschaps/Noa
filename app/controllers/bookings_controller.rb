@@ -1,10 +1,8 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
 
-
   def show
     @booking.total_price = total_price
-    @review = Review.new
   end
 
   def new
