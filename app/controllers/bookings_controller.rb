@@ -4,6 +4,7 @@ class BookingsController < ApplicationController
 
   def show
     @booking.total_price = total_price
+    @review = Review.new
   end
 
   def new
