@@ -33,10 +33,6 @@
             <h3> <i class="fas fa-search-location"></i> Location : <%= @animal.location %> </h3>
           </div>
 
-  <!-- MAP -->
-
-
-
           <div
             id="map"
             class="map-show";
@@ -50,20 +46,14 @@
       <div class="search-form align-items-center" id="show-search-form">
         <h2><i class="far fa-calendar-alt"></i>  Add dates</h2>
         <br>
-        <%= form_tag animal_confirmation_path(@animal), method: :get do %>
-          <div class="dates-inputs">
-            <div class="form-group form-date">
-              <%= label_tag(:starting_date, "Start Date") %>
-              <%= date_field_tag :starting_date, id:'start' %>
-            </div>
-            <div class="form-group form-date">
-              <%= label_tag(:starting_date, "Start Date") %>
-              <%= date_field_tag :ending_date, id:'end' %>
-            </div>
-          </div>
-          <br>
-          <%= submit_tag "Choose this pet", class: "btn btn-primary mt-20" %>
+        <%= simple_form_for [@animal, @booking] do |f| %>
+          <%= f.input :starting_date, id:'start' %>
+          <%= f.input :ending_date, id:'end' %>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            <%= f.submit "Choose pet", class: "btn btn-primary" %>
+          </button>
         <% end %>
+
       </div>
     </div>
   </div>

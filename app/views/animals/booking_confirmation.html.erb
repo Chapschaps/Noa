@@ -1,59 +1,39 @@
 <h1>Summary of your rental</h1>
-
-<div class="booking-messages">
-  <div class="card-description-show-booking">
-    <strong><%= @animal.description %></strong>
-    <br>
-    <br>
-    <h3>Location</h3>
-    <p><%= @animal.location %></p>
-    <h3>Sexe</h3>
-    <p><%= @animal.sexe %></p>
-    <h3>Size</h3>
-    <p><%= @animal.size %></p>
-    <h3>Age</h3>
-    <p><%= @animal.age %></p>
-    <h3>Risk factor</h3>
-    <% if @animal.risk_factor == "XXX" %>
-      <p style="color:red;"><strong>High</strong></p>
-    <% elsif @animal.risk_factor =="XX" %>
-      <p>Normal</p>
-    <% elsif @animal.risk_factor =="X" %>
-      <p style="color:green;"><strong>Low</strong></p>
-    <% end %>
-  </div>
-  <div>
-    <div class="card-animal">
-         <% if @animal.photo.attached? %>
-          <%= cl_image_tag @animal.photo.key, height: 200, width: 400, crop: :fill %>
-        <% else %>
-          <%= image_tag "test.jpg", height: 200, width: 400, crop: :fill %>
-        <% end %>
-       <div class="card-animal-infos">
-        <div>
-          <h2><%=  @animal.name %></h2>
-          <p><%= @animal.specie %> <%= @animal.location %></p>
-        </div>
-        <h2 class="card-animal-pricing"> <%= "#{@animal.price}$/per day" %></h2>
-        <%= cl_image_tag @animal.user.photo.key, height: 40, width: 40, crop: :fill, class: "card-animal-user avatar-bordered"  %>
-       </div>
-       <%= link_to "", animal_path(@animal), class: "card-link" %>
-    </div>
-    <div class="search-form" id="show-search-from">
-      <h4>Add dates for prices</h4>
-      <h5>Dates</h5>
-      <p>From <%= params[:starting_date].to_date %> to <%= params[:ending_date].to_date %></p>
-      <h5>Price of the booking</h5>
-      <%= ((params[:ending_date].to_date - params[:starting_date].to_date).to_i * @animal.price).to_s + '$' %>
-      <br>
-      <br>
-      <%= simple_form_for [@animal, @booking] do |f| %>
-        <%= f.input :starting_date, as: :hidden, html5: true, input_html: { value: params[:starting_date] } %>
-        <%= f.input :ending_date, as: :hidden, html5: true, input_html: { value: params[:ending_date] } %>
-        <%= f.submit :Book, class: "btn btn-primary" %>
-      <% end %>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= @animal.location %>
+        <%#= ending_date.value %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
     </div>
   </div>
 </div>
 
-
+<!-- Your last Form Tag -->
+<%= form_tag animal_confirmation_path(@animal), method: :get do %>
+  <div class="dates-inputs">
+    <div class="form-group form-date">
+      <%= label_tag(:starting_date, "Start Date") %>
+      <%= date_field_tag :starting_date, id:'start' %>
+    </div>
+    <div class="form-group form-date">
+      <%= label_tag(:ending_date, "End Date") %>
+      <%= date_field_tag :ending_date, id:'end' %>
+    </div>
+  </div>
+  <br>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    <%= submit_tag "Choose pet", class: "btn btn-primary mt-20" %>
+  </button>
+<% end %>
