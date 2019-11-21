@@ -3,21 +3,24 @@
   <div class="d-flex justify-content-around align-items-center">
 
     <div class="col-sm-6 p-10 m-10" style = "background-color: white">
-<!--       <div class="d-flex justify-content-around">
- -->        <div class="container" >
-          <%= link_to user_booking_path(@booking.user, @booking), method: :delete do %>
-             <i class="far fa-trash-alt text-right" id="corbeille"></i>
-          <% end %>
-          <h1>Your booking with <%= @booking.animal.name %></h1>
+      <div class="container" >
+        <%= link_to user_booking_path(@booking.user, @booking), method: :delete do %>
+           <i class="far fa-trash-alt text-right" id="corbeille"></i>
+        <% end %>
+        <h1>Your booking with <%= @booking.animal.name %></h1>
 
-          <p>Starting date : <%= @booking.starting_date %></p>
-          <p>Ending date : <%= @booking.ending_date %></p>
-          <p>Total Price : <%= @booking.total_price %> EUR</p>
-        </div>
-        <div class="bubbly-button button-all">
-          <%= link_to "Edit", edit_user_booking_path(@booking.user, @booking), class: "button-link" %>
+        <p><i class="fas fa-calendar-alt"></i>  From <%= @booking.starting_date %> To <%= @booking.ending_date %></p>
+        <p><i class="fas fa-dollar-sign"></i>  <%= @booking.total_price %> EUR</p>
+        <div class="d-flex">
+          <div class="bubbly-button button-all">
+            <%= link_to "Edit", edit_user_booking_path(@booking.user, @booking), class: "button-link" %>
+          </div>
+          <div class="bubbly-button button-all">
+            <%= link_to "Delete", user_booking_path(@booking.user, @booking), method: :delete, class: "button-link" %>
+          </div>
         </div>
       </div>
+    </div>
 
     <div style="margin-top: 20px">
 

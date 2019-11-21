@@ -44,18 +44,25 @@ class AnimalsController < ApplicationController
   end
 
   def update
-    @animal = Animal.new(animal_params)
+    @animal = Animal.find(params[:id])
+    @animal.update(animal_params)
     if @animal.save
       redirect_to animal_path(@animal)
     else
-      render :new
+      render :edit
     end
   end
 
   def destroy
     @animal = Animal.find(params[:id])
-    @animal.delete
-    redirect_to animals_path
+    if @animal.bookings.present?
+      flash[:alert] = "You can't delete this animal because it has bookings"
+      redirect_to animals_path
+    else
+      @animal.delete
+      flash[:notice] = "Animal deleted"
+      redirect_to animals_path
+    end
   end
 
   # def booking_confirmation
