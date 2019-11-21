@@ -53,12 +53,12 @@ class AnimalsController < ApplicationController
     redirect_to animals_path
   end
 
-  def booking_confirmation
-    require 'date'
-    @animal = Animal.find(params[:animal_id])
-    @booking = Booking.new
-    @price = params[:ending_day]
-  end
+  # def booking_confirmation
+  #   require 'date'
+  #   @animal = Animal.find(params[:animal_id])
+  #   @booking = Booking.new
+  #   @price = params[:ending_day]
+  # end
 
   private
 

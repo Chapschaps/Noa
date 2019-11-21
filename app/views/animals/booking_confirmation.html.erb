@@ -20,22 +20,20 @@
   </div>
 </div>
 
-
-
+<!-- Your last Form Tag -->
 <%= form_tag animal_confirmation_path(@animal), method: :get do %>
-          <div class="dates-inputs">
-            <div class="form-group form-date">
-              <%= label_tag(:starting_date, "Start Date") %>
-              <%= date_field_tag :starting_date, id:'start' %>
-            </div>
-            <div class="form-group form-date">
-              <%= label_tag(:ending_date, "End Date") %>
-              <%= date_field_tag :ending_date, id:'end' %>
-            </div>
-          </div>
-          <br>
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-            <%= submit_tag "Choose pet", class: "btn btn-primary mt-20" %>
-          </button>
-
-        <% end %>
+  <div class="dates-inputs">
+    <div class="form-group form-date">
+      <%= label_tag(:starting_date, "Start Date") %>
+      <%= date_field_tag :starting_date, id:'start' %>
+    </div>
+    <div class="form-group form-date">
+      <%= label_tag(:ending_date, "End Date") %>
+      <%= date_field_tag :ending_date, id:'end' %>
+    </div>
+  </div>
+  <br>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    <%= submit_tag "Choose pet", class: "btn btn-primary mt-20" %>
+  </button>
+<% end %>
