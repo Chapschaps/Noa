@@ -1,0 +1,19 @@
+<h1>Update <%= @animal.name %>'s profile</h1>
+<%= simple_form_for [@animal] do |f| %>
+
+<div class="container create-animal">
+
+  <%= f.input :name, placeholder:"ex: Medor" %>
+  <%= f.input :age %>
+  <%= f.input :specie %>
+  <%= f.input :size, collection: Animal::SIZE %>
+  <%= f.input :location, placeholder:"ex: Medor" %>
+  <%= f.input :sexe, collection: Animal::SEXE %>
+  <%= f.input :risk_factor, collection: Animal::RISK_FACTOR %>
+  <%= f.input :description %>
+  <%= f.input :price %>
+  <%= f.input :photo, as: :file %>
+  <%= f.button :submit, class: "btn btn-primary"%>
+  <% end %>
+
+</div>
