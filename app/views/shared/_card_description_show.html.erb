@@ -1,0 +1,47 @@
+<div class="description-map col-8 shadow-none p-3 mb-5 bg-light rounded">
+  <div class="card-description-show">
+    <div class="card-description-flex d-flex justify-content-between">
+      <br />
+      <div class="card">
+        <div class="card-body">
+          <i class="fas fa-venus-mars"></i>
+          <h3> <%= @animal.sexe %> </h3>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <i class="fas fa-arrows-alt-v"></i>
+          <h3> <%= @animal.size %> </h3>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <i class="fas fa-universal-access"></i>
+           <h3> <%= @animal.age %> </h3>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <i class="fas fa-exclamation-triangle"></i>
+          <% if @animal.risk_factor == "XXX" %>
+            <h3 ><i style="color:red;"><strong>High</strong></h3>
+          <% elsif @animal.risk_factor =="XX" %>
+            <h3><i style="color:blue;"><strong>Normal</strong></h3>
+          <% elsif @animal.risk_factor =="X" %>
+            <h3><i style="color:green;"><strong>Low</strong></h3>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <p><%= @animal.description %></p>
+    <h3 class="address-title"> <i class="fas fa-search-location"></i> Location : <%= @animal.location %> </h3>
+  </div>
+  <div
+    id="map"
+    class="map-show";
+    style="width: 100%;
+    height: 300px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  ></div>
+</div>
