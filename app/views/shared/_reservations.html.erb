@@ -1,0 +1,90 @@
+<% reservations = [] %>
+<% @user.animals.each do |animal|   %>
+    <% animal.bookings.each {|booking| reservations.push(booking)}%>
+<% end %>
+<% sorted_bookings = (reservations.sort_by {|booking| booking.status}).reverse %>
+
+  <p> New Bookings:</p>
+<% sorted_bookings.each do |booking| %>
+
+  <% if booking.status == 'requested' %>
+         <div class="card-reservation m-3 ">
+            <div class="mx-3">
+              <%= cl_image_tag booking.user.photo.key, height: 35, width: 35, class: "animal-img avatar-bordered" %>
+              <p><%= booking.user.username %></p>
+              <br>
+            </div>
+<strong></strong>
+      <div class="card-reservation-infos text-left">
+        <div>
+          <p>Wants to rent <strong> <%=booking.animal.name%> </strong>  </p>
+          <p> <%= "Start: #{booking.starting_date.strftime("%d, %B %Y")}" %></p>
+          <p> <%= "Start: #{booking.ending_date.strftime("%d, %B %Y")}" %></p>
+          <p><%= "Pick-up: #{booking.animal.location}" %></p>
+          <p class="btn btn-outline-primary"> <%= link_to "View Booking", booking_path(booking) %></p>
+          <br>
+        </div>
+        <div class="text-right">
+          <h2 class="text-right"><%= "Total Price: #{booking.total_price} $"%></h2>
+            <%if booking.status == "requested" %>
+              <span class='text-warning'>Pending Validation</span></p>
+             <p class='btn btn-outline-primary validation'> <%= link_to "confirm reservation", booking_validate_path(booking) %></p>
+            <%elsif booking.status == "validated" %>
+              <span class='text-success'>Validated</span></p>
+            <%elsif booking.status == "canceled" %>
+              <span class='text-danger'>Canceled</span></p>
+            <%elsif booking.status == "expired" %>
+              <span class='text-secondary'>Expired</span></p>
+            <%elsif booking.status == "finished" %>
+              <span class='text-muted'>Done</span></p>
+            <% end %>
+        </div>
+      </div>
+    </div>
+
+  <% end %>
+<% end %>
+
+<br>
+
+<p> Bookings</p>
+<% sorted_bookings.each do |booking| %>
+
+<% if booking.status != 'requested' %>
+       <div class="card-reservation m-3 ">
+          <div class="mx-3">
+            <%= cl_image_tag booking.user.photo.key, height: 35, width: 35, class: "animal-img avatar-bordered" %>
+            <p><%= booking.user.username %></p>
+            <br>
+          </div>
+
+    <div class="card-reservation-infos text-left">
+      <div>
+        <p>Wants to rent <strong> <%=booking.animal.name%> </strong>  </p>
+        <p> <%= "Start: #{booking.starting_date.strftime("%d, %B %Y")}" %></p>
+        <p> <%= "Start: #{booking.ending_date.strftime("%d, %B %Y")}" %></p>
+        <p><%= "Pick-up: #{booking.animal.location}" %></p>
+        <p class="btn btn-outline-primary"> <%= link_to "View Booking", booking_path(booking) %></p>
+        <br>
+      </div>
+      <div class="text-right">
+
+        <h2 class="text-right"><%= "Total Price: #{booking.total_price} $"%></h2>
+          <%if booking.status == "requested" %>
+            <span class='text-warning'>Pending Validation</span></p>
+           <p class='btn btn-outline-primary validation'> <%= link_to "confirm reservation", booking_validate_path(booking) %></p>
+          <%elsif booking.status == "validated" %>
+            <span class='text-success'>Validated</span></p>
+          <%elsif booking.status == "canceled" %>
+            <span class='text-danger'>Canceled</span></p>
+          <%elsif booking.status == "expired" %>
+            <span class='text-secondary'>Expired</span></p>
+          <%elsif booking.status == "finished" %>
+            <span class='text-muted'>Done</span></p>
+          <% end %>
+      </div>
+    </div>
+  </div>
+
+<% end %>
+<% end %>

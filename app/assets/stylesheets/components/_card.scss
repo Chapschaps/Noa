@@ -153,9 +153,74 @@ border-radius: 3px;
 .card-booking-infos .card-animal-owner {
   position: absolute;
   right: 8px;
+  top: 6px;
+  width: 35px;
+};
+
+.card-reservation {
+  overflow: hidden;
+  height: 170px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  position:relative;
+
+  }
+
+
+
+  .card-reservation .card-link{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+.card-reservation .animal-img {
+  height: 85px;
+  width: 85px;
+  object-fit: cover;
+}
+
+.card-reservation h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-reservation p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-reservation .card-reservation-infos {
+  padding: 16px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  width: 100%;
+
+  h2{
+    text-align: left;
+  }
+ }
+
+
+.card-reservation-infos .card-animal-owner {
+  position: absolute;
+  right: 8px;
   top: 10px;
   width: 35px
 };
+
 
 
 .cards {

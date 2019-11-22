@@ -48,3 +48,22 @@
     opacity:0.5;
   }
 }
+
+
+.navbar-noa{
+  border-bottom: thin solid $light-gray;
+}
+
+.notification {
+  position: absolute;
+  background-color: #FF5B5C;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: justify-all;
+  font-weight: bold;
+  bottom: 5px;
+  left: 25px;
+
+}

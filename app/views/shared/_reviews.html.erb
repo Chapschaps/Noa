@@ -1,11 +1,16 @@
-
-<p><%= review.content %></p>
-
-<p><% review.rating.times do %>
-<i class= "fas fa-star"></i>
-<% end %>
-<% (5 - review.rating).times do %>
-<i class= "far fa-star"></i>
-<% end %>
-</p>
+<div class="notification">
+  <div class="etoiles d-flex">
+    <%= image_tag review.user.photo, class: "avatar-notif" %>
+    <div class="notification-content">
+    <p><small><%= review.rating.times do %>
+      <i class= "fas fa-star"></i>
+      <% end %>
+      <% (5 - review.rating).times do %>
+      <i class= "far fa-star"></i>
+      <% end %>
+      </small></p>
+      <p><%= review.content %></p>
+    </div>
+  </div>
+ </div>
 

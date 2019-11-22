@@ -27,6 +27,13 @@
           <% else %>
             <%= cl_image_tag 'https://www.rphfm.org/wp-content/uploads/2016/08/avatar-anonyme.gif', class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% end %>
+          <% current_user.animals.each do |animal| %>
+            <% animal.bookings.each do |booking| %>
+              <% if booking.status == "requested" %>
+                <p class="notification"><%= "1" %></p>
+              <% end %>
+            <% end %>
+          <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Dashboard", dashboard_path, class: "dropdown-item" %>
             <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
