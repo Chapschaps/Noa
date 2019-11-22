@@ -31,3 +31,7 @@ for (var i = 0; i < bubblyButtons.length; i++) {
 }
 
 import "../plugins/flatpickr";
+
+import { initStarRating } from '../plugins/init_star_rating';
+
+initStarRating();

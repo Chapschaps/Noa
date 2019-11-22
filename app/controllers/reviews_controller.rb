@@ -1,12 +1,14 @@
 class ReviewsController < ApplicationController
+
   def new
+    @animal = Animal.find(params[:animal_id])
     @review = Review.new
   end
 
   def create
-
-    @animal = Booking.find(params[:booking_id]).animal
+    @animal = Animal.find(params[:animal_id])
     @review = Review.new(review_params)
+    @review.animal = @animal
     @review.user = current_user
     if @review.save
       redirect_to dashboard_path(current_user)

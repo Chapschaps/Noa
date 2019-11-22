@@ -15,12 +15,25 @@
 </div>
 
 <% if current_user.animals.include?(@animal) %>
-
+  <div class="container">
+    <div class="d-flex justify-content-between">
+      <div class="bubbly-button button-all">
+        <%= link_to "Edit", edit_animal_path(@animal), class: "button-link" %>
+      </div>
+      <%= render 'shared/card_description_show' %>
+      <div class="bubbly-button button-all">
+        <%= link_to "Delete" , animal_path(@animal), method: :delete, data: { confirm: "Are you sure?" }, class: "button-link" %>
+      </div>
+    </div>
+  </div>
 <% else %>
   <div class="container">
       <div class="row">
         <div class="d-flex justify-content-between w-100%">
-          <%= render 'shared/card_description_show' %>
+          <div class="left-description">
+            <%= render 'shared/card_description_show' %>
+            <%= render 'shared/reviews' %>
+          </div>
           <div class="search-form align-items-center" id="show-search-form">
             <h2><i class="far fa-calendar-alt"></i>  Add dates</h2>
             <br>

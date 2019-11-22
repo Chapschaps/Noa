@@ -4,14 +4,13 @@ Rails.application.routes.draw do
   resources :animals do
     resources :bookings, only: [:new, :create]
     get '/confirmation', to: 'animals#booking_confirmation', as: 'confirmation'
+    resources :reviews, only: [:new, :create]
   end
+ 
   resources :bookings, only: [:show] do
-  resources :reviews, only: [:create, :new]
-  get '/validate', to: 'bookings#validate'
-
-
+    get '/validate', to: 'bookings#validate'
   end
-  resources :users, except: [:index, :show] do
+   resources :users, except: [:index, :show] do
   resources :bookings, only: [:index, :edit, :update, :destroy]
   end
 
