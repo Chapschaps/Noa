@@ -11,7 +11,7 @@ class ReviewsController < ApplicationController
     @review.animal = @animal
     @review.user = current_user
     if @review.save
-      redirect_to dashboard_path(current_user)
+      redirect_to animal_path(@animal)
     else
       flash[:alert] = "Something went wrong."
       render :new

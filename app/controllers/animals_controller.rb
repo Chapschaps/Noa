@@ -19,6 +19,7 @@ class AnimalsController < ApplicationController
   def show
     @animals = Animal.geocoded
     @animal = Animal.find(params[:id])
+    @review = Review.new
     @booking = Booking.new
     @markers =
      [{

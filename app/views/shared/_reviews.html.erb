@@ -1,1 +1,11 @@
-<h1>test</h1>
+
+<p><%= review.content %></p>
+
+<p><% review.rating.times do %>
+<i class= "fas fa-star"></i>
+<% end %>
+<% (5 - review.rating).times do %>
+<i class= "far fa-star"></i>
+<% end %>
+</p>
+
