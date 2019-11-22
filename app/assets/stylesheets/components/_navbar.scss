@@ -1,8 +1,10 @@
-.navbar-noa {
+.out-of-home{
+    border-bottom: thin solid $light-gray;
+  }
+.navbar-noa{
   justify-content: space-between;
   background: white;
   color: black !important;
-
 }
 
 .login{
@@ -45,8 +47,4 @@
   &:hover{
     opacity:0.5;
   }
-}
-
-.navbar-noa{
-  border-bottom: thin solid $light-gray;
 }
