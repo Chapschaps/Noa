@@ -27,7 +27,7 @@
     <div class= "img-animal">
       <div class="card" style="width: 18rem;">
         <%= cl_image_tag @booking.animal.photo.key, crop: :fill, class: "card-img-top" %>
-        <div class="card-body">
+        <div class="card-body-booking">
           <ul class="card-text" style="list-style: none">
             <li> <i class="fas fa-venus-mars"></i> Sexe : <%= @booking.animal.sexe %> </li>
             <li> <i class="fas fa-arrows-alt-v"></i> Size : <%= @booking.animal.size %> </li>

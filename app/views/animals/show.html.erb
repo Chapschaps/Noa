@@ -16,6 +16,14 @@
 <% if current_user.animals.include?(@animal) %>
   <div class="container">
     <%= render 'shared/card_description_show_owner' %>
+    <h2 class= "text-left">
+      <%= pluralize @animal.reviews.size, "review" %>
+    </h2>
+    <div id="reviews">
+      <% @animal.reviews.each do |review| %>
+        <%= render 'shared/reviews', review: review %>
+      <% end %>
+    </div>
   </div>
 <% else %>
   <div class="container">

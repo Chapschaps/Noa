@@ -11,7 +11,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <%= simple_form_for [@animal, @review], html: { class: "review_form d-flex" } do |f| %>
+        <%= simple_form_for [@animal || animal , @review || review ], html: { class: "review_form d-flex justify-content-between" } do |f| %>
         <%= f.input :content %>
         <%= f.input :rating, collection: (1..5).to_a, label: "Rate your experience" %>
       </div>
