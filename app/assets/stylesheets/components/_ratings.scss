@@ -1,0 +1,71 @@
+.notification {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  background: white;
+  padding: 8px 8px;
+  border: 1px solid rgb(235,235,235);
+  width: 600px;
+  height: 100px;
+  box-shadow:  0 0 5px rgba(0,0,0,0.1)
+}
+
+.notification p {
+  color: #364f6b;
+  text-align: left;
+  }
+
+
+.reviews-block {
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+}
+
+
+.etoiles {
+  padding-left : 30px;
+  padding-top: 15px;
+  background-color: white;
+  text-align: center;
+  padding: inherit;
+}
+.notification .notification-content {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.notification p {
+  margin: 0;
+  line-height: 1.8;
+}
+
+.notification small {
+  color: black;
+  font-weight: bold;
+}
+.notification .notification-actions {
+  opacity: 0;
+  display: flex;
+  transition: ease .3s;
+}
+
+.notification:hover .notification-actions {
+  opacity: 1;
+}
+
+.notification .notification-actions a {
+  color: #999999;
+  margin-left: 16px;
+  font-size: 14px;
+}
+
+.notification .notification-actions a:hover {
+  color: #555555;
+}
+
+.avatar-notif {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
