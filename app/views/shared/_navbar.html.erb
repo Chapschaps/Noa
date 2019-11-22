@@ -30,7 +30,7 @@
           <% current_user.animals.each do |animal| %>
             <% animal.bookings.each do |booking| %>
               <% if booking.status == "requested" %>
-                <p class="notification"><%= "1" %></p>
+                <p class="notif"><%= "1" %></p>
               <% end %>
             <% end %>
           <% end %>
