@@ -57,7 +57,9 @@
 
 
   <div class="container">
-    <h2>Your Animals:</h2>
+    <br>
+    <br>
+    <p>Your Animals</p>
     <% @user.animals.each do |animal| %>
       <% if animal.photo.attached? %>
         <div class="card-animal-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('<%= cl_image_path animal.photo.key%>'); background-position: inherit;">
