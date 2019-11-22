@@ -64,6 +64,7 @@
                   <div>
                     <h2><%= "#{booking.animal.name} (#{booking.animal.specie})" %></h2>
                     <p>   <%= booking.animal.location %></p>
+                    <%= link_to "booking", booking_path(booking) %>
                     <p> <%= "Start: #{booking.starting_date}." %></p>
                     <p class="mt-0"><%= "End: #{booking.ending_date}" %></p>
                   </div>
@@ -73,6 +74,7 @@
                     <p >
                       <%if booking.status == "requested" %>
                         <span class='text-warning'>Pending Validation</span></p>
+                       <p class='btn btn-primary validation'> <%= link_to "confirm reservation", booking_validate_path(booking) %></p>
                       <%elsif booking.status == "validated" %>
                         <span class='text-success'>Validated</span></p>
                       <%elsif booking.status == "canceled" %>
@@ -84,7 +86,6 @@
                       <% end %>
                   </div>
                 </div>
-                <%= link_to "", booking_path(booking), class: "card-link" %>
               </div>
             <% end %>
             </div>
