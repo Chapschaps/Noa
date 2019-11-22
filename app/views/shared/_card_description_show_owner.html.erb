@@ -1,5 +1,17 @@
 <div class="description-map col-8 shadow-none p-3 mb-5 bg-light rounded">
   <div class="card-description-show">
+    <div class="logo-owner">
+      <span id="logo-owner-edit" style="font-size: 25px; color: #5D5D5D;">
+        <i class="far fa-edit" >
+          <%= link_to "", edit_animal_path(@animal), class: "button-link" %>
+        </i>
+      </span>
+      <span id="logo-owner-delete" style="font-size: 25px; color: #5D5D5D;">
+        <i class="far fa-trash-alt">
+          <%= link_to "" , animal_path(@animal), method: :delete, data: { confirm: "Are you sure?" }, class: "button-link" %>
+        </i>
+      </span>
+    </div>
     <div class="card-description-flex d-flex justify-content-between">
       <br />
       <div class="card">

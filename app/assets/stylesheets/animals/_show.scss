@@ -16,8 +16,8 @@
 .description-map {
   background-color:white;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 16px 40px;
-  height: 650px;
-  width:750px;
+  // height: 650px;
+  // width:750px;
   text-align: left;
   align-items: center;
   margin-top: 20px;
@@ -84,4 +84,24 @@
     text-align: left;
     color: grey;
   }
+}
+
+#logo-owner-edit{
+  margin-bottom:10px;
+  cursor: pointer;
+  &:hover{
+    opacity:0.5;
+  }
+}
+
+#logo-owner-delete{
+  margin-bottom:10px;
+  cursor: pointer;
+  &:hover{
+    opacity:0.5;
+  }
+}
+
+.logo-owner {
+  text-align:right;
 }

@@ -15,51 +15,39 @@
 </div>
 <% if current_user.animals.include?(@animal) %>
   <div class="container">
-    <div class="d-flex justify-content-between">
-      <div class="bubbly-button button-all">
-        <%= link_to "Edit", edit_animal_path(@animal), class: "button-link" %>
-      </div>
-      <%= render 'shared/card_description_show' %>
-      <div class="bubbly-button button-all">
-        <%= link_to "Delete" , animal_path(@animal), method: :delete, data: { confirm: "Are you sure?" }, class: "button-link" %>
-      </div>
-    </div>
+    <%= render 'shared/card_description_show_owner' %>
   </div>
 <% else %>
   <div class="container">
       <div class="row">
         <div class="d-flex justify-content-between w-100%">
           <div class="left-megablock">
-            <div class="left-description">
-              <%= render 'shared/card_description_show' %>
-            </div>
-              <div class="reviews-block text-left">
-                <%= render 'shared/new_review', animal: @animal, review: @animal.reviews %>
-                <h2 class= "text-left">
-                  <%= pluralize @animal.reviews.size, "review" %>
-                  <br>
-                  <br>
-                </h2>
-
-                <div id="reviews">
-                  <% if @animal.reviews.blank? %>
-                    Be the first to leave a review for <%= @animal.name %>
-                  <% else %>
-                    <% @animal.reviews.each do |review| %>
-                      <%= render 'shared/reviews', review: review %>
-                    <% end %>
+              <div class="left-description">
+                <%= render 'shared/card_description_show' %>
+              </div>
+              <h2 class= "text-left">
+                <%= pluralize @animal.reviews.size, "review" %>
+              </h2>
+              <%= render 'shared/new_review', animal: @animal, review: @animal.reviews %>
+              <div id="reviews">
+                <% if @animal.reviews.blank? %>
+                  Be the first to leave a review for <%= @animal.name %>
+                <% else %>
+                  <% @animal.reviews.each do |review| %>
+                    <%= render 'shared/reviews', review: review %>
                   <% end %>
-                </div>
+                <% end %>
               </div>
             </div>
-          <div class="search-form align-items-center" id="show-search-form">
-            <h2><i class="far fa-calendar-alt"></i>  Add dates</h2>
-            <br>
-            <%= simple_form_for [@animal, @booking] do |f| %>
-              <%= f.input :starting_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-              <%= f.input :ending_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-              <button class="bubbly-button"><%= f.submit "Choose pet", class: "submit-class" %></button>
-            <% end %>
+            <div class="search-form align-items-center" id="show-search-form">
+              <h2><i class="far fa-calendar-alt"></i>  Add dates</h2>
+              <br>
+              <%= simple_form_for [@animal, @booking] do |f| %>
+                <%= f.input :starting_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+                <%= f.input :ending_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+                <button class="bubbly-button"><%= f.submit "Choose pet", class: "submit-class" %></button>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
