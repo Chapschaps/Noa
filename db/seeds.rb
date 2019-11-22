@@ -540,7 +540,7 @@ puts 'Creating bookings...'
  vacances.save
 
   vacances = Booking.new({
-    status:      'accepted',
+    status:      'validated',
     starting_date:    Date.today + 14,
     ending_date:    Date.today + 18
   })
@@ -552,7 +552,7 @@ puts 'Creating bookings...'
 
 
   vacances = Booking.new({
-    status:      'accepted',
+    status:      'validated',
     starting_date:    Date.today + 3,
     ending_date:    Date.today + 12
   })
@@ -563,7 +563,7 @@ puts 'Creating bookings...'
  vacances.save
 
   vacances = Booking.new({
-    status:      'accepted',
+    status:      'requested',
     starting_date:    Date.today + 4,
     ending_date:    Date.today + 15
   })
