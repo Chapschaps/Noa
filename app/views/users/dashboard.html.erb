@@ -42,12 +42,15 @@
                            <%elsif booking.status == "expired" %>
                              <span class='text-secondary'>Expired</span></h2>
                            <%elsif booking.status == "finished" %>
-                             <span class='text-muted'>Done</span></h2>
+                              <span class='text-muted'>Done</span></h2>
                            <% end %>
                        </div>
                    </div>
                    <%= link_to "", booking_path(booking), class: "card-link" %>
                  </div>
+                 <% if booking.status == "finished" %>
+                  <%= render 'shared/new_review', animal: booking.animal, review: @review %>
+                <% end %>
                <% end %>
             </div>
         </div>

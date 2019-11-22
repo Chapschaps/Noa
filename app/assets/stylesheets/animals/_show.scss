@@ -89,6 +89,7 @@
 #logo-owner-edit{
   margin-bottom:10px;
   cursor: pointer;
+  color: #5D5D5D;
   &:hover{
     opacity:0.5;
   }
@@ -97,6 +98,7 @@
 #logo-owner-delete{
   margin-bottom:10px;
   cursor: pointer;
+  color: #5D5D5D;
   &:hover{
     opacity:0.5;
   }
@@ -104,4 +106,12 @@
 
 .logo-owner {
   text-align:right;
+}
+
+.fa-trash-alt:before {
+  color: #5D5D5D;
+}
+
+.fa-edit:before {
+  color: #5D5D5D;
 }

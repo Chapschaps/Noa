@@ -7,9 +7,9 @@
         <% end %>
       </span>
       <span id="logo-owner-delete" style="font-size: 25px; color: #5D5D5D;">
-        <i class="far fa-trash-alt">
-          <%= link_to "" , animal_path(@animal), method: :delete, data: { confirm: "Are you sure?" }, class: "button-link" %>
-        </i>
+        <%= link_to animal_path(@animal), method: :delete, data: { confirm: "Are you sure?" }, class: "button-link" do %>
+        <i class="far fa-trash-alt"></i>
+        <% end %>
       </span>
     </div>
     <div class="card-description-flex d-flex justify-content-between">
