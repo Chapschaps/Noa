@@ -2,9 +2,9 @@
   <div class="card-description-show">
     <div class="logo-owner">
       <span id="logo-owner-edit" style="font-size: 25px; color: #5D5D5D;">
-        <i class="far fa-edit" >
-          <%= link_to "", edit_animal_path(@animal), class: "button-link" %>
-        </i>
+        <%= link_to edit_animal_path(@animal), class: "button-link" do %>
+          <i class="far fa-edit" ></i>
+        <% end %>
       </span>
       <span id="logo-owner-delete" style="font-size: 25px; color: #5D5D5D;">
         <i class="far fa-trash-alt">

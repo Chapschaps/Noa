@@ -15,7 +15,7 @@
       <div class="text-right">
         <%= cl_image_tag booking.user.photo.key, height: 35, width: 35, class: "card-animal-owner avatar-bordered" %>
         <h2><%= "Total Price: #{booking.total_price} $"%></h2>
-        <p >
+        <p>
           <%if booking.status == "requested" %>
             <span class='text-warning'>Pending Validation</span></p>
            <p class='btn btn-primary validation'> <%= link_to "confirm reservation", booking_validate_path(booking) %></p>
