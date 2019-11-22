@@ -2,7 +2,7 @@
   <div class="etoiles d-flex">
     <%= image_tag review.user.photo, class: "avatar-notif" %>
     <div class="notification-content">
-    <p><small><%= review.rating.times do %>
+    <p><small><% review.rating.times do %>
       <i class= "fas fa-star"></i>
       <% end %>
       <% (5 - review.rating).times do %>
