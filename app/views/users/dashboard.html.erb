@@ -10,45 +10,45 @@
         </div>
         <div class="tab-slider--container">
           <div id="tab1" class="tab-slider--body">
-              <% sorted_bookings = (@user.bookings.sort_by {|booking| booking.status}).reverse %>
-                 <% sorted_bookings.each do |booking| %>
-                   <div class="card-booking m-3 ">
-                     <% if booking.animal.photo.attached? %>
-                       <%= cl_image_tag booking.animal.photo.key, height: 400, width: 400, crop: :fill, class: "animal-img" %>
-                     <% else %>
-                     <%= image_tag "test.jpg", height: 200, width: 400, crop: :fill %>
-                       <% end %>
-                     <div class="card-booking-infos">
-                         <div>
-                           <h2><%= "#{booking.animal.name} (#{booking.animal.specie})" %></h2>
-                           <p>   <%= booking.animal.location %></p>
-                           <p> <%= "Start: #{booking.starting_date}." %></p>
-                           <p class="mt-0"><%= "End: #{booking.ending_date}" %></p>
-                         </div>
-                         <div class="text-right">
-                           <%= cl_image_tag booking.animal.user.photo.key, height: 35, width: 35, class: "card-animal-owner avatar-bordered" %>
-                           <h2 class="text-right"><%= "Total Price: #{booking.total_price} $"%></h2>
-                           <h2 class="text-right">
-                             <%if booking.status == "requested" %>
-                               <span class='text-warning'>Pending Validation</span></h2>
-                             <%elsif booking.status == "validated" %>
-                               <span class='text-success'>Validated</span></h2>
-                             <%elsif booking.status == "canceled" %>
-                               <span class='text-danger'>Canceled</span></h2>
-                             <%elsif booking.status == "expired" %>
-                               <span class='text-secondary'>Expired</span></h2>
-                             <%elsif booking.status == "finished" %>
-                               <span class='text-muted'>Done</span></h2>
-                             <% end %>
-                         </div>
-                     </div>
-                     <%= link_to "", booking_path(booking), class: "card-link" %>
-                   </div>
-                 <% end %>
+            <%= render 'shared/reservations' %>
              </div>
           <div id="tab2" class="tab-slider--body">
             <p style="opacity: 0;">Test</p>
-              <%= render 'shared/reservations' %>
+            <% sorted_bookings = (@user.bookings.sort_by {|booking| booking.status}).reverse %>
+               <% sorted_bookings.each do |booking| %>
+                 <div class="card-booking m-3 ">
+                   <% if booking.animal.photo.attached? %>
+                     <%= cl_image_tag booking.animal.photo.key, height: 400, width: 400, crop: :fill, class: "animal-img" %>
+                   <% else %>
+                   <%= image_tag "test.jpg", height: 200, width: 400, crop: :fill %>
+                     <% end %>
+                   <div class="card-booking-infos">
+                       <div>
+                         <h2><%= "#{booking.animal.name} (#{booking.animal.specie})" %></h2>
+                         <p>   <%= booking.animal.location %></p>
+                         <p> <%= "Start: #{booking.starting_date}." %></p>
+                         <p class="mt-0"><%= "End: #{booking.ending_date}" %></p>
+                       </div>
+                       <div class="text-right">
+                         <%= cl_image_tag booking.animal.user.photo.key, height: 35, width: 35, class: "card-animal-owner avatar-bordered" %>
+                         <h2 class="text-right"><%= "Total Price: #{booking.total_price} $"%></h2>
+                         <h2 class="text-right">
+                           <%if booking.status == "requested" %>
+                             <span class='text-warning'>Pending Validation</span></h2>
+                           <%elsif booking.status == "validated" %>
+                             <span class='text-success'>Validated</span></h2>
+                           <%elsif booking.status == "canceled" %>
+                             <span class='text-danger'>Canceled</span></h2>
+                           <%elsif booking.status == "expired" %>
+                             <span class='text-secondary'>Expired</span></h2>
+                           <%elsif booking.status == "finished" %>
+                             <span class='text-muted'>Done</span></h2>
+                           <% end %>
+                       </div>
+                   </div>
+                   <%= link_to "", booking_path(booking), class: "card-link" %>
+                 </div>
+               <% end %>
             </div>
         </div>
       </div>
