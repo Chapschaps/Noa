@@ -32,7 +32,9 @@
           <h2 class="text-right"><%= "Total Price: #{booking.total_price} $"%></h2>
             <%if booking.status == "requested" %>
               <span class='text-warning'>Pending Validation</span></p>
-             <p class='btn btn-outline-primary validation'> <%= link_to "confirm reservation", booking_validate_path(booking) %></p>
+             <p class="bubbly-button button-all">
+               <%= link_to "Confirm reservation", booking_validate_path(booking), class: "button-link" %>
+             </p>
             <%elsif booking.status == "validated" %>
               <span class='text-success'>Validated</span></p>
             <%elsif booking.status == "canceled" %>

@@ -27,10 +27,12 @@
           <% else %>
             <%= cl_image_tag 'https://www.rphfm.org/wp-content/uploads/2016/08/avatar-anonyme.gif', class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% end %>
+          <% count = 0 %>
           <% current_user.animals.each do |animal| %>
             <% animal.bookings.each do |booking| %>
               <% if booking.status == "requested" %>
-                <p class="notif"><%= "1" %></p>
+                <% count += 1 %>
+                <p class="notif"><%= count %></p>
               <% end %>
             <% end %>
           <% end %>
