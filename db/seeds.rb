@@ -483,7 +483,7 @@ puts 'Creating bookings...'
     ending_date:    Date.today + 15
   })
 
- vacances.user = leo
+ vacances.user = nadia
  vacances.animal = aslan
  vacances.total_price = total_price(vacances)
 
@@ -491,7 +491,7 @@ puts 'Creating bookings...'
 
 
  vacances = Booking.new({
-    status:      'validated',
+    status:      'canceled',
     starting_date:    Date.today + 4,
     ending_date:    Date.today + 15
   })
@@ -529,7 +529,7 @@ puts 'Creating bookings...'
  vacances.save
 
  vacances = Booking.new({
-    status:      'requested',
+    status:      'validated',
     starting_date:    Date.today + 14,
     ending_date:    Date.today + 23
   })
