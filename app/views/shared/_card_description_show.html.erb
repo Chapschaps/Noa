@@ -1,4 +1,4 @@
-<div class="description-map col-8 shadow-none p-3 mb-5 bg-light rounded">
+<div class="description-map shadow-none p-3 mb-5 bg-light rounded">
   <div class="card-description-show">
     <div class="card-description-flex d-flex justify-content-between">
       <br />
@@ -30,11 +30,11 @@
         <div class="card-body">
           <i class="fas fa-exclamation-triangle"></i>
           <% if @animal.risk_factor == "XXX" %>
-            <h3 ><i id="risk_factor"><strong style="color:red;">High</strong></h3>
+            <h3 ><i id="risk_factor"><strong style="color:red;">High</strong></i></h3>
           <% elsif @animal.risk_factor =="XX" %>
-            <h3><i id="risk_factor"><strong style="color:blue;">Normal</strong></h3>
+            <h3><i id="risk_factor"><strong style="color:blue;">Normal</strong></i></h3>
           <% elsif @animal.risk_factor =="X" %>
-            <h3><i id="risk_factor" ><strong style="color:green;">Low</strong></h3>
+            <h3><i id="risk_factor" ><strong style="color:green;">Low</strong></i></h3>
           <% end %>
         </div>
       </div>
