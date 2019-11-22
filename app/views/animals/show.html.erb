@@ -30,10 +30,27 @@
   <div class="container">
       <div class="row">
         <div class="d-flex justify-content-between w-100%">
-          <div class="left-description">
-            <%= render 'shared/card_description_show' %>
-            <%= render 'shared/reviews' %>
-          </div>
+          <div class="left-megablock">
+            <div class="left-description">
+              <%= render 'shared/card_description_show' %>
+            </div>
+              <div class="reviews-block text-left">
+                <%= render 'shared/new_review', animal: @animal, review: @animal.reviews %>
+                <h2 class= "text-left">
+                  <%= pluralize @animal.reviews.size, "review" %>
+                </h2>
+
+                <div id="reviews">
+                  <% if @animal.reviews.blank? %>
+                    Be the first to leave a review for <%= @animal.name %>
+                  <% else %>
+                    <% @animal.reviews.each do |review| %>
+                      <%= render 'shared/reviews', review: review %>
+                    <% end %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
           <div class="search-form align-items-center" id="show-search-form">
             <h2><i class="far fa-calendar-alt"></i>  Add dates</h2>
             <br>

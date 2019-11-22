@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   resources :animals do
+    resources :reviews, only: [:create]
     resources :bookings, only: [:new, :create]
     get '/confirmation', to: 'animals#booking_confirmation', as: 'confirmation'
-    resources :reviews, only: [:new, :create]
   end
   resources :bookings, only: [:show]
   resources :users, except: [:index, :show] do
