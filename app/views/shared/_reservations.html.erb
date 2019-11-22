@@ -4,7 +4,7 @@
 <% end %>
 <% sorted_bookings = (reservations.sort_by {|booking| booking.status}).reverse %>
 
-  <p> New Bookings:</p>
+  <p class="mb-3"> New Bookings</p>
 <% sorted_bookings.each do |booking| %>
 
   <% if booking.status == 'requested' %>

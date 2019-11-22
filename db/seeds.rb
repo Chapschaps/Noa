@@ -160,7 +160,7 @@ file = URI.open('https://images.unsplash.com/photo-1507146426996-ef05306b995a?ix
 
 
   romeo= Animal.new ({
-    name:      'Romeo',
+    name:      'Basile',
     size:      'XS',
     specie:     'Dog',
     location: "3 rue de la main d'or, 75011, Paris",
