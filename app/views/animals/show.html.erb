@@ -21,13 +21,11 @@
   <div class="container">
       <div class="row">
         <div class="d-flex justify-content-between w-100%">
-          <div class="left-megablock">
+          <div class="left-megablock col-md-8">
               <div class="left-description">
                 <%= render 'shared/card_description_show' %>
               </div>
-              <h2 class= "text-left">
-                <%= pluralize @animal.reviews.size, "review" %>
-              </h2>
+
               <%= render 'shared/new_review', animal: @animal, review: @animal.reviews %>
               <div id="reviews">
                 <% if @animal.reviews.blank? %>
@@ -39,12 +37,13 @@
                 <% end %>
               </div>
             </div>
-            <div class="search-form align-items-center" id="show-search-form">
+
+            <div class="search-form align-items-center col-md-4" id="show-search-form">
               <h2><i class="far fa-calendar-alt"></i>  Add dates</h2>
               <br>
               <%= simple_form_for [@animal, @booking] do |f| %>
-                <%= f.input :starting_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-                <%= f.input :ending_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+                <%= f.input :starting_date, as: :string, required: false, input_html: {class: "datepicker"}, placeholder: "YYYY/MM/DD" %>
+                <%= f.input :ending_date, as: :string, required: false, input_html: {class: "datepicker"}, placeholder: "YYYY/MM/DD" %>
                 <button class="bubbly-button"><%= f.submit "Choose pet", class: "submit-class" %></button>
               <% end %>
             </div>
