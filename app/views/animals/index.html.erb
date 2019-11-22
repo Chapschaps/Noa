@@ -10,6 +10,12 @@
     <% end %>
   </div>
 
+<!--   <select id="template-example">
+    <%# @animals.each do |animal| %>
+      <option value="<%= animal.id %>" data-favorite-color="<%= animal.name %>"><%= animal.name %></option>
+    <%# end %>
+  </select> -->
+
 <div class="container">
 <% if params[:query].present? %>
 <h2 id="show-results"><%= @animals.count %> animals found in <%= params[:query] %></h2>

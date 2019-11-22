@@ -6,6 +6,10 @@ import { initMapbox } from '../plugins/init_mapbox';
 
 import "../plugins/tab";
 
+import "../plugins/flatpickr";
+
+import { initSelect2 } from '../plugins/init_select2';
+
 initMapbox();
 
 var animateButton = function(e) {
@@ -30,4 +34,19 @@ for (var i = 0; i < bubblyButtons.length; i++) {
   bubblyButtons[i].addEventListener('click', animateButton, false);
 }
 
-import "../plugins/flatpickr";
+initSelect2();
+
+const form = document.querySelector('#search-form');
+form.addEventListener('submit', updateResultsList);
+
+$(document).ready(function() {
+  function formatExample(animal) {
+    var originalOption = $(animal.element);
+    return "   " + animal.text;
+  }
+  $('select#template-example').select2({
+    formatResult: formatExample,
+    formatSelection: formatExample,
+    escapeMarkup: function(m) { return m; }
+  });
+});
