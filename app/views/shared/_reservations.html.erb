@@ -38,6 +38,9 @@
             <%elsif booking.status == "finished" %>
               <span class='text-muted'>Done</span></p>
             <% end %>
+            <%= link_to user_booking_path(booking.user, booking), method: :delete, data: { confirm: "Are you sure?" } do %>
+               <i class="far fa-trash-alt text-right" id="corbeille"></i>
+            <% end %>
         </div>
       </div>
     </div>
@@ -81,6 +84,9 @@
             <span class='text-secondary'>Expired</span></p>
           <%elsif booking.status == "finished" %>
             <span class='text-muted'>Done</span></p>
+          <% end %>
+          <%= link_to user_booking_path(booking.user, booking), method: :delete, data: { confirm: "Are you sure?" } do %>
+             <i class="far fa-trash-alt text-right" id="corbeille"></i>
           <% end %>
       </div>
     </div>
