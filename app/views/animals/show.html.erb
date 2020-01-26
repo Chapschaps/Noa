@@ -13,7 +13,7 @@
     </div>
   </div>
 </div>
-<% if current_user.animals.include?(@animal) %>
+<% if user_signed_in? && current_user.animals.include?(@animal) %>
   <div class="container">
     <%= render 'shared/card_description_show_owner' %>
     <h2 class= "text-left">
